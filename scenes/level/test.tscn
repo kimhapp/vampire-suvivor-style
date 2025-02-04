@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cyacongahq5vd"]
+
+[ext_resource type="PackedScene" uid="uid://vjxtarbk2kq1" path="res://scenes/player/player.tscn" id="1_fhvp5"]
+[ext_resource type="PackedScene" uid="uid://bq1ebfwt3gkf2" path="res://scenes/npc/enemy/spawner.tscn" id="2_kfs7p"]
+
+[node name="test" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource("1_fhvp5")]
+position = Vector2(295, 172)
+
+[node name="spawner" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_kfs7p")]
+player = NodePath("../player")

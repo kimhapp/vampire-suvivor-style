@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://c0p00ql2h284p"]
+
+[ext_resource type="Script" path="res://scirpts/npc/enemy/enemy.gd" id="1_21bsg"]
+[ext_resource type="Texture2D" uid="uid://b5xc5bcwc1w25" path="res://assets/RPG Battlers 3/1 v1.png" id="2_1ncf6"]
+[ext_resource type="Material" uid="uid://u5ax3cegd8d3" path="res://shaders/rainbow.tres" id="2_sixsy"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8mr35"]
+
+[node name="enemy" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_21bsg")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = ExtResource("2_sixsy")
+texture = ExtResource("2_1ncf6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_8mr35")
