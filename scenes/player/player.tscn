@@ -39,6 +39,7 @@ show_percentage = false
 autostart = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
+limit_smoothed = true
 
 [connection signal="body_entered" from="self_damage" to="." method="_on_self_damage_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
