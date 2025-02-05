@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="enemy" load_steps=3 format=3 uid="uid://c3nisxe614x11"]
 
-[ext_resource type="Script" path="res://scirpts/npc/enemy/enemy_type.gd" id="1_xvs11"]
+[ext_resource type="Script" path="res://scripts/npc/enemy/enemy_type.gd" id="1_xvs11"]
 [ext_resource type="Texture2D" uid="uid://b5xc5bcwc1w25" path="res://assets/RPG Battlers 3/1 v1.png" id="2_eudwy"]
 
 [resource]

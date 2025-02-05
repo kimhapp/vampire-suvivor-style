@@ -5,6 +5,7 @@ var speed : float = 75
 var direction : Vector2
 var damage : float
 var knockback : Vector2
+var separation : float
 
 var elite : bool = false:
 	set(value):
@@ -14,17 +15,25 @@ var elite : bool = false:
 			damage = damage * 1.25
 			scale = Vector2(1.5, 1.5)
 
-var type : enemy:
+var type : Enemy:
 	set(value):
 		type = value
 		$Sprite2D.texture = value.texture
 		damage = value.damage
 
 func _physics_process(delta: float) -> void:
-	var seperation = (player_reference.position - position).length()
-	if seperation >= 500 and not elite:
+	check_separation()
+	knockback_update(delta)
+
+func check_separation():
+	separation = (player_reference.position - position).length()
+	if separation >= 500 and not elite:
 		queue_free()
 	
+	if separation < player_reference.nearest_enemy_distance:
+		player_reference.nearest_enemy = self
+
+func knockback_update(delta):
 	velocity = (player_reference.position - position).normalized() * speed
 	knockback = knockback.move_toward(Vector2.ZERO, 1)
 	velocity += knockback

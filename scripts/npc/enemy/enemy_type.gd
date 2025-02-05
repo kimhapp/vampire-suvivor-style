@@ -1,5 +1,5 @@
 extends Resource
-class_name enemy
+class_name Enemy
 
 @export var title : String
 @export var texture : Texture2D

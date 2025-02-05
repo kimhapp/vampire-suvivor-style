@@ -6,7 +6,7 @@ extends Node2D
 var distance : float = 400
 var can_spawn : bool = false
 
-@export var enemy_types : Array[enemy]
+@export var enemy_types : Array[Enemy]
 
 var minute : int:
 	set(value):
@@ -21,8 +21,8 @@ var second : int:
 			minute += 1
 		%second.text = str(second).lpad(2, '0')
 
-func _physics_process(delta: float) -> void:
-	if get_tree().get_node_count_in_group("enemy") < 300:
+func _physics_process(_delta: float) -> void:
+	if get_tree().get_node_count_in_group("enemy") < 600:
 		can_spawn = true
 	else:
 		can_spawn = false

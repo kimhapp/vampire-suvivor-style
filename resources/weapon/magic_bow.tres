@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="SingleShot" load_steps=4 format=3 uid="uid://bn3no2uw22xcf"]
+
+[ext_resource type="PackedScene" uid="uid://djmv1eusnkhtn" path="res://scenes/player/projectile.tscn" id="1_bfqet"]
+[ext_resource type="Script" path="res://scripts/player/single_shot.gd" id="2_d0sve"]
+[ext_resource type="Texture2D" uid="uid://cwcja78kklvo8" path="res://assets/archer.png" id="3_7yx66"]
+
+[resource]
+script = ExtResource("2_d0sve")
+title = "Magic Bow"
+texture = ExtResource("3_7yx66")
+damage = 3.0
+cooldown = 1.0
+speed = 400.0
+projectile_node = ExtResource("1_bfqet")

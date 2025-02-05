@@ -20,8 +20,8 @@ config/icon="res://icon.svg"
 window/size/viewport_width=640
 window/size/viewport_height=360
 window/size/resizable=false
-window/size/window_width_override=1280
-window/size/window_height_override=720
+window/size/window_width_override=800
+window/size/window_height_override=600
 window/stretch/mode="canvas_items"
 
 [dotnet]
@@ -33,6 +33,8 @@ project/assembly_name="Vampire Suvivor Style"
 folder_colors={
 "res://assets/": "blue",
 "res://resources/": "yellow",
+"res://scenes/": "green",
+"res://scripts/": "orange",
 "res://shaders/": "red"
 }
 
