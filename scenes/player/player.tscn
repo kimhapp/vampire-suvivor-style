@@ -1,8 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://vjxtarbk2kq1"]
+[gd_scene load_steps=11 format=3 uid="uid://vjxtarbk2kq1"]
 
 [ext_resource type="Script" path="res://scripts/player/player.gd" id="1_24umg"]
 [ext_resource type="PackedScene" uid="uid://b7juvpc1j6366" path="res://scenes/player/slot.tscn" id="2_0jej4"]
 [ext_resource type="Resource" uid="uid://bn3no2uw22xcf" path="res://resources/weapon/magic_bow.tres" id="3_rac1g"]
+[ext_resource type="Texture2D" uid="uid://dga0js3eqadbw" path="res://assets/Exp Bar/Under_Bar.png" id="4_ywamd"]
+[ext_resource type="Texture2D" uid="uid://bxdn1dggv32k7" path="res://assets/Exp Bar/Exp_Bar.png" id="5_s7hlm"]
+[ext_resource type="Texture2D" uid="uid://dvpwtjgh4opqc" path="res://assets/Exp Bar/Progress_Bar.png" id="6_53j4n"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_s6p77"]
 size = Vector2(20, 20)
@@ -10,6 +13,9 @@ size = Vector2(20, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nbvkm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mr6w8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q2kl2"]
+radius = 50.0
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_24umg")
@@ -29,6 +35,25 @@ layout_mode = 2
 
 [node name="slot3" parent="UI/weapons" instance=ExtResource("2_0jej4")]
 layout_mode = 2
+
+[node name="XP" type="TextureProgressBar" parent="UI"]
+unique_name_in_owner = true
+offset_right = 192.0
+offset_bottom = 304.0
+max_value = 10.0
+value = 10.0
+texture_under = ExtResource("4_ywamd")
+texture_over = ExtResource("5_s7hlm")
+texture_progress = ExtResource("6_53j4n")
+
+[node name="level" type="Label" parent="UI/XP"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 600.0
+offset_top = 15.0
+offset_right = 640.0
+offset_bottom = 38.0
+text = "Lvl 1"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = SubResource("PlaceholderTexture2D_s6p77")
@@ -59,5 +84,13 @@ autostart = true
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_smoothed = true
 
+[node name="magnet" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="magnet"]
+shape = SubResource("CircleShape2D_q2kl2")
+
 [connection signal="body_entered" from="self_damage" to="." method="_on_self_damage_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="area_entered" from="magnet" to="." method="_on_magnet_area_entered"]

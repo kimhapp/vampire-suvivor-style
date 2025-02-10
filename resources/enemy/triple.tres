@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="enemy" load_steps=3 format=3 uid="uid://vcxwigfjnm06"]
+[gd_resource type="Resource" script_class="Enemy" load_steps=3 format=3 uid="uid://vcxwigfjnm06"]
 
 [ext_resource type="Script" path="res://scripts/npc/enemy/enemy_type.gd" id="1_671jm"]
 [ext_resource type="Texture2D" uid="uid://bbksvxpl5uqxx" path="res://assets/RPG Battlers 3/4 v1.png" id="2_u063a"]
@@ -8,4 +8,4 @@ script = ExtResource("1_671jm")
 title = "triple"
 texture = ExtResource("2_u063a")
 damage = 9.0
-health = 0.0
+health = 12.0

@@ -37,15 +37,12 @@ layout_mode = 2
 text = "00"
 
 [node name="Timer" type="Timer" parent="."]
-autostart = true
 
 [node name="pattern" type="Timer" parent="."]
 wait_time = 10.0
-autostart = true
 
 [node name="elite" type="Timer" parent="."]
 wait_time = 9.0
-autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="pattern" to="." method="_on_pattern_timeout"]

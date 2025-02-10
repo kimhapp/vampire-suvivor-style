@@ -59,7 +59,7 @@ tile_map_data = PackedByteArray("AAAHAAwAAAAFAAgAAAAbAA0AAAAEAAQAAAAGAAQAAAAAAAQ
 tile_set = SubResource("TileSet_jqyta")
 
 [node name="player" parent="." instance=ExtResource("1_fhvp5")]
-position = Vector2(295, 172)
+position = Vector2(287, 151)
 
 [node name="spawner" parent="." node_paths=PackedStringArray("player") instance=ExtResource("2_kfs7p")]
 player = NodePath("../player")
