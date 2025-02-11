@@ -1,6 +1,8 @@
-[gd_resource type="Resource" script_class="Enemy" load_steps=3 format=3 uid="uid://vcxwigfjnm06"]
+[gd_resource type="Resource" script_class="Enemy" load_steps=5 format=3 uid="uid://vcxwigfjnm06"]
 
 [ext_resource type="Script" path="res://scripts/npc/enemy/enemy_type.gd" id="1_671jm"]
+[ext_resource type="Script" path="res://scripts/item/pickup_resource.gd" id="1_i21xi"]
+[ext_resource type="Resource" uid="uid://cyoso6tt0qeeh" path="res://resources/pickup/blue_gem.tres" id="2_u7m5r"]
 [ext_resource type="Texture2D" uid="uid://bbksvxpl5uqxx" path="res://assets/RPG Battlers 3/4 v1.png" id="2_u063a"]
 
 [resource]
@@ -9,3 +11,4 @@ title = "triple"
 texture = ExtResource("2_u063a")
 damage = 9.0
 health = 12.0
+drops = Array[ExtResource("1_i21xi")]([ExtResource("2_u7m5r")])
