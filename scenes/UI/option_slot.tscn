@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=3 uid="uid://57k82nvldq3c"]
 
-[ext_resource type="Texture2D" uid="uid://cwcja78kklvo8" path="res://assets/archer.png" id="1_cr6uu"]
+[ext_resource type="Texture2D" uid="uid://cwcja78kklvo8" path="res://assets/weapons/archer.png" id="1_cr6uu"]
 [ext_resource type="Script" path="res://scripts/UI/option_slot.gd" id="2_rdtyd"]
-[ext_resource type="Texture2D" uid="uid://cky510bdqrsou" path="res://assets/options.png" id="3_pwyko"]
+[ext_resource type="Texture2D" uid="uid://cky510bdqrsou" path="res://assets/Exp Bar/options.png" id="3_pwyko"]
 
 [node name="option_slot" type="TextureButton"]
 custom_minimum_size = Vector2(315, 40)

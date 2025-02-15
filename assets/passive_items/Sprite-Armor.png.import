@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cyxqunxkcnktg"
-path="res://.godot/imported/panel.png-98abd75f17820992d19abbe4c1e458c7.ctex"
+uid="uid://2r0dg3rt6sek"
+path="res://.godot/imported/Sprite-Armor.png-c313eba184391c1d145e7a33730320ae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/panel.png"
-dest_files=["res://.godot/imported/panel.png-98abd75f17820992d19abbe4c1e458c7.ctex"]
+source_file="res://assets/passive_items/Sprite-Armor.png"
+dest_files=["res://.godot/imported/Sprite-Armor.png-c313eba184391c1d145e7a33730320ae.ctex"]
 
 [params]
 

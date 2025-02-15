@@ -1,14 +1,17 @@
-[gd_scene load_steps=17 format=3 uid="uid://vjxtarbk2kq1"]
+[gd_scene load_steps=36 format=3 uid="uid://vjxtarbk2kq1"]
 
 [ext_resource type="Script" path="res://scripts/player/player.gd" id="1_24umg"]
 [ext_resource type="PackedScene" uid="uid://b7juvpc1j6366" path="res://scenes/UI/slot.tscn" id="2_0jej4"]
-[ext_resource type="Texture2D" uid="uid://bu3kuk2aqwm61" path="res://assets/Crystal.png" id="2_a6ygw"]
-[ext_resource type="Texture2D" uid="uid://cyxqunxkcnktg" path="res://assets/panel.png" id="3_6u0jk"]
-[ext_resource type="Resource" uid="uid://bn3no2uw22xcf" path="res://resources/weapon/magic_bow.tres" id="3_rac1g"]
+[ext_resource type="Texture2D" uid="uid://bu3kuk2aqwm61" path="res://assets/Coin_Gems/Crystal.png" id="2_a6ygw"]
+[ext_resource type="Texture2D" uid="uid://cyxqunxkcnktg" path="res://assets/Exp Bar/panel.png" id="3_6u0jk"]
 [ext_resource type="Texture2D" uid="uid://dga0js3eqadbw" path="res://assets/Exp Bar/Under_Bar.png" id="4_ywamd"]
+[ext_resource type="Resource" uid="uid://bn3no2uw22xcf" path="res://resources/weapon/magic_wand.tres" id="5_3hkud"]
 [ext_resource type="Texture2D" uid="uid://bxdn1dggv32k7" path="res://assets/Exp Bar/Exp_Bar.png" id="5_s7hlm"]
+[ext_resource type="PackedScene" uid="uid://dwv6t654jgali" path="res://scenes/UI/passive_slot.tscn" id="6_5fcxc"]
 [ext_resource type="Texture2D" uid="uid://dvpwtjgh4opqc" path="res://assets/Exp Bar/Progress_Bar.png" id="6_53j4n"]
+[ext_resource type="Resource" uid="uid://c85hjmwa8g67b" path="res://resources/item/passive_item/attract_orb.tres" id="7_i2qdl"]
 [ext_resource type="Script" path="res://scripts/UI/options.gd" id="7_xt6fs"]
+[ext_resource type="Texture2D" uid="uid://s2nxsaylk77j" path="res://assets/chest/Fantasy RPG (Toony) 32x32.png" id="12_hdmv1"]
 
 [sub_resource type="Gradient" id="Gradient_5ryrp"]
 offsets = PackedFloat32Array(0.76, 1)
@@ -26,6 +29,125 @@ angle_max = 179.0
 gravity = Vector3(0, 98, 0)
 scale_min = 0.5
 color_ramp = SubResource("GradientTexture1D_g7phi")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ct1ax"]
+atlas = ExtResource("12_hdmv1")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_drr6e"]
+atlas = ExtResource("12_hdmv1")
+region = Rect2(288, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fxx82"]
+atlas = ExtResource("12_hdmv1")
+region = Rect2(320, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8kukq"]
+atlas = ExtResource("12_hdmv1")
+region = Rect2(352, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6xawd"]
+atlas = ExtResource("12_hdmv1")
+region = Rect2(288, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2fegl"]
+atlas = ExtResource("12_hdmv1")
+region = Rect2(320, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_10d46"]
+atlas = ExtResource("12_hdmv1")
+region = Rect2(352, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fkt04"]
+atlas = ExtResource("12_hdmv1")
+region = Rect2(288, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t5sq5"]
+atlas = ExtResource("12_hdmv1")
+region = Rect2(320, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sjydm"]
+atlas = ExtResource("12_hdmv1")
+region = Rect2(352, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rb0yx"]
+atlas = ExtResource("12_hdmv1")
+region = Rect2(288, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7cxs8"]
+atlas = ExtResource("12_hdmv1")
+region = Rect2(320, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pxw4h"]
+atlas = ExtResource("12_hdmv1")
+region = Rect2(352, 96, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5h7hg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ct1ax")
+}],
+"loop": true,
+"name": &"idle_boss_chest",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_drr6e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fxx82")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8kukq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6xawd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2fegl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_10d46")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fkt04")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t5sq5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sjydm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rb0yx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7cxs8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pxw4h")
+}],
+"loop": false,
+"name": &"open_boss_chest",
+"speed": 24.0
+}]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_32f85"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ek7y"]
+bg_color = Color(0.721569, 0.435294, 0.313726, 1)
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.454902, 0.247059, 0.223529, 1)
+border_blend = true
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+shadow_size = 1
+shadow_offset = Vector2(2, 2)
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_s6p77"]
 size = Vector2(20, 20)
@@ -53,6 +175,7 @@ lifetime = 1.5
 
 [node name="panel" type="NinePatchRect" parent="UI"]
 process_mode = 3
+visible = false
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -89,12 +212,27 @@ offset_bottom = 60.0
 
 [node name="slot" parent="UI/weapons" instance=ExtResource("2_0jej4")]
 layout_mode = 2
-weapon = ExtResource("3_rac1g")
+item = ExtResource("5_3hkud")
 
 [node name="slot2" parent="UI/weapons" instance=ExtResource("2_0jej4")]
 layout_mode = 2
 
 [node name="slot3" parent="UI/weapons" instance=ExtResource("2_0jej4")]
+layout_mode = 2
+
+[node name="passive_items" type="HBoxContainer" parent="UI"]
+offset_top = 70.0
+offset_right = 40.0
+offset_bottom = 110.0
+
+[node name="passive_slot" parent="UI/passive_items" instance=ExtResource("6_5fcxc")]
+layout_mode = 2
+item = ExtResource("7_i2qdl")
+
+[node name="passive_slot2" parent="UI/passive_items" instance=ExtResource("6_5fcxc")]
+layout_mode = 2
+
+[node name="passive_slot3" parent="UI/passive_items" instance=ExtResource("6_5fcxc")]
 layout_mode = 2
 
 [node name="XP" type="TextureProgressBar" parent="UI"]
@@ -115,7 +253,7 @@ offset_right = 640.0
 offset_bottom = 38.0
 text = "Lvl 1"
 
-[node name="options" type="VBoxContainer" parent="UI" node_paths=PackedStringArray("weapons", "panel", "particle")]
+[node name="options" type="VBoxContainer" parent="UI" node_paths=PackedStringArray("weapons", "passive_items", "panel", "particle")]
 unique_name_in_owner = true
 process_mode = 3
 anchors_preset = 8
@@ -131,8 +269,69 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("7_xt6fs")
 weapons = NodePath("../weapons")
+passive_items = NodePath("../passive_items")
 panel = NodePath("../panel")
 particle = NodePath("../particle")
+
+[node name="chest" type="NinePatchRect" parent="UI"]
+custom_minimum_size = Vector2(300, 200)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -100.0
+offset_right = 150.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_6u0jk")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 5
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="UI/chest"]
+position = Vector2(150, 98)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_5h7hg")
+animation = &"idle_boss_chest"
+
+[node name="open" type="Button" parent="UI/chest"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -25.0
+offset_top = -65.0
+offset_right = 25.0
+offset_bottom = -34.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_32f85")
+theme_override_styles/normal = SubResource("StyleBoxFlat_8ek7y")
+text = "Open
+"
+
+[node name="close" type="Button" parent="UI/chest"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -25.0
+offset_top = -65.0
+offset_right = 25.0
+offset_bottom = -34.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_32f85")
+theme_override_styles/normal = SubResource("StyleBoxFlat_8ek7y")
+text = "Close"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = SubResource("PlaceholderTexture2D_s6p77")
@@ -167,7 +366,8 @@ limit_smoothed = true
 collision_layer = 0
 collision_mask = 4
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="magnet"]
+[node name="magnet" type="CollisionShape2D" parent="magnet"]
+unique_name_in_owner = true
 shape = SubResource("CircleShape2D_q2kl2")
 
 [connection signal="body_entered" from="self_damage" to="." method="_on_self_damage_body_entered"]

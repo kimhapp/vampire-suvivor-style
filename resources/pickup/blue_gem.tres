@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="Gem" load_steps=3 format=3 uid="uid://cyoso6tt0qeeh"]
 
-[ext_resource type="Texture2D" uid="uid://bu3kuk2aqwm61" path="res://assets/Crystal.png" id="1_qkq8b"]
+[ext_resource type="Texture2D" uid="uid://bu3kuk2aqwm61" path="res://assets/Coin_Gems/Crystal.png" id="1_qkq8b"]
 [ext_resource type="Script" path="res://scripts/item/gem.gd" id="2_7w2r3"]
 
 [resource]

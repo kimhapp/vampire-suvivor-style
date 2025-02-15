@@ -1,0 +1,53 @@
+[gd_resource type="Resource" script_class="PassiveItem" load_steps=7 format=3 uid="uid://dfsula4nextkq"]
+
+[ext_resource type="Script" path="res://scripts/item/passive_item.gd" id="1_ympdh"]
+[ext_resource type="Texture2D" uid="uid://2r0dg3rt6sek" path="res://assets/passive_items/Sprite-Armor.png" id="2_6bitr"]
+[ext_resource type="Script" path="res://scripts/player/stats.gd" id="3_chtfw"]
+
+[sub_resource type="Resource" id="Resource_ph0i7"]
+script = ExtResource("3_chtfw")
+description = "+2 Armor"
+max_health = 0.0
+recovery = 0.0
+armor = 2.0
+shield = 0.0
+movement_speed = 0.0
+attack_range = 0.0
+magnet = 0.0
+revival = 0
+growth = 0.0
+dmg_multiplier = 0.0
+
+[sub_resource type="Resource" id="Resource_12vwd"]
+script = ExtResource("3_chtfw")
+description = "+4 Armor"
+max_health = 0.0
+recovery = 0.0
+armor = 4.0
+shield = 0.0
+movement_speed = 0.0
+attack_range = 0.0
+magnet = 0.0
+revival = 0
+growth = 0.0
+dmg_multiplier = 0.0
+
+[sub_resource type="Resource" id="Resource_jk8vx"]
+script = ExtResource("3_chtfw")
+description = "+6 Armor"
+max_health = 0.0
+recovery = 0.0
+armor = 6.0
+shield = 0.0
+movement_speed = 0.0
+attack_range = 0.0
+magnet = 0.0
+revival = 0
+growth = 0.0
+dmg_multiplier = 0.0
+
+[resource]
+script = ExtResource("1_ympdh")
+upgrades = Array[ExtResource("3_chtfw")]([SubResource("Resource_ph0i7"), SubResource("Resource_12vwd"), SubResource("Resource_jk8vx")])
+title = "Armor"
+texture = ExtResource("2_6bitr")

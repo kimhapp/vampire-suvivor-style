@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cwcja78kklvo8"
-path="res://.godot/imported/archer.png-c0ac80a7af9a946ec45c602d143bb596.ctex"
+uid="uid://cbgo5qasdivhj"
+path="res://.godot/imported/Sprite-Candelabrador.png-8dba9885a19815e6808018bc22f395bd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/archer.png"
-dest_files=["res://.godot/imported/archer.png-c0ac80a7af9a946ec45c602d143bb596.ctex"]
+source_file="res://assets/passive_items/Sprite-Candelabrador.png"
+dest_files=["res://.godot/imported/Sprite-Candelabrador.png-8dba9885a19815e6808018bc22f395bd.ctex"]
 
 [params]
 

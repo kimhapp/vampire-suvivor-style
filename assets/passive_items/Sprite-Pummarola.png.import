@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bu3kuk2aqwm61"
-path="res://.godot/imported/Crystal.png-6f0238e9adf40ad44caf5578b6e479d3.ctex"
+uid="uid://d4m4mohxu1lck"
+path="res://.godot/imported/Sprite-Pummarola.png-57fbba752d9847adcc7f43abec6cd974.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Crystal.png"
-dest_files=["res://.godot/imported/Crystal.png-6f0238e9adf40ad44caf5578b6e479d3.ctex"]
+source_file="res://assets/passive_items/Sprite-Pummarola.png"
+dest_files=["res://.godot/imported/Sprite-Pummarola.png-57fbba752d9847adcc7f43abec6cd974.ctex"]
 
 [params]
 

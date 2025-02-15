@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="SingleShot" load_steps=11 format=3 uid="uid://bn3no2uw22xcf"]
+[gd_resource type="Resource" script_class="SingleShot" load_steps=13 format=3 uid="uid://bn3no2uw22xcf"]
 
 [ext_resource type="PackedScene" uid="uid://djmv1eusnkhtn" path="res://scenes/player/projectile.tscn" id="1_bfqet"]
+[ext_resource type="Resource" uid="uid://cq6ma8qwyc5fx" path="res://resources/weapon/holy_wand.tres" id="1_chi04"]
 [ext_resource type="Script" path="res://scripts/player/single_shot.gd" id="2_d0sve"]
-[ext_resource type="Texture2D" uid="uid://cwcja78kklvo8" path="res://assets/archer.png" id="3_7yx66"]
+[ext_resource type="Resource" uid="uid://c85hjmwa8g67b" path="res://resources/item/passive_item/attract_orb.tres" id="2_lkq1c"]
+[ext_resource type="Texture2D" uid="uid://ttpt17osnh3v" path="res://assets/weapons/Sprite-Magic_Wand.png" id="3_oar4l"]
 [ext_resource type="Script" path="res://scripts/player/upgrade.gd" id="4_k7xx3"]
 [ext_resource type="Script" path="res://scripts/player/projectile_upgrade.gd" id="5_k4y55"]
 
@@ -43,10 +45,12 @@ description = "-0.3s cooldown"
 
 [resource]
 script = ExtResource("2_d0sve")
-title = "Magic Bow"
-texture = ExtResource("3_7yx66")
 damage = 3.0
 cooldown = 1.0
 speed = 400.0
 projectile_node = ExtResource("1_bfqet")
 upgrades = Array[ExtResource("4_k7xx3")]([SubResource("Resource_irfqm"), SubResource("Resource_832t6"), SubResource("Resource_bs45j"), SubResource("Resource_c86rj"), SubResource("Resource_3nepp")])
+item_needed = ExtResource("2_lkq1c")
+evolution = ExtResource("1_chi04")
+title = "Magic Wand"
+texture = ExtResource("3_oar4l")

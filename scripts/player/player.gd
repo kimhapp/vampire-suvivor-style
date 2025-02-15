@@ -1,10 +1,24 @@
 extends CharacterBody2D
 
-var speed : float = 150
+var movement_speed : float = 150
 var health : float = 100:
 	set(value):
-		health = value
+		health = max(value, 0)
 		%health.value = value
+var max_health : float = 100:
+	set(value):
+		max_health = value
+		%health.max_value = value
+var recovery : float = 0
+var armor : float = 0
+var shield : float = 0
+var dmg_multiplier : float = 1.0
+var attack_range : float = 150
+var magnet : float = 0:
+	set(value):
+		magnet = value
+		%magnet.shape.radius = 50 + value
+var growth : float = 1
 
 var XP : int = 0:
 	set(value):
@@ -23,21 +37,27 @@ var level : int = 1:
 			%XP.max_value = 40
 
 var nearest_enemy : CharacterBody2D
-var nearest_enemy_distance : float = INF
+var nearest_enemy_distance : float = attack_range
+
+func _ready() -> void:
+	magnet = 0
 
 func _physics_process(delta: float) -> void:
 	if is_instance_valid(nearest_enemy):
 		nearest_enemy_distance = nearest_enemy.separation
 		print(nearest_enemy.name)
 	else:
-		nearest_enemy_distance = INF
+		nearest_enemy_distance = attack_range
+		nearest_enemy = null
 	
-	velocity = Input.get_vector("left", "right", "up", "down") * speed
+	velocity = Input.get_vector("left", "right", "up", "down") * movement_speed
 	move_and_collide(velocity * delta)
 	check_XP()
+	health += recovery * delta
 
 func take_damage(amount):
-	health -= amount
+	# Armor will only reduce 90% of incoming dmg max
+	health -= max(amount - armor, amount * 0.1)
 	print(amount)
 
 func _on_self_damage_body_entered(body: Node2D) -> void:
@@ -48,8 +68,8 @@ func _on_timer_timeout() -> void:
 	%collision.set_deferred("disabled", false)
 
 func gain_XP(amount):
-	XP += amount
-	total_XP += amount
+	XP += amount * growth
+	total_XP += amount * growth
 
 func check_XP():
 	if XP >= %XP.max_value:
