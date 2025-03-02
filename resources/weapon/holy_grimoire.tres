@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="Circular" load_steps=6 format=3 uid="uid://bxmtmnembtvu5"]
+
+[ext_resource type="Texture2D" uid="uid://b447q6aju0jpn" path="res://assets/weapons/Icon-Unholy_Vespers.png" id="1_0x221"]
+[ext_resource type="PackedScene" uid="uid://djmv1eusnkhtn" path="res://scenes/item/weapon/projectile.tscn" id="2_8w7rl"]
+[ext_resource type="Texture2D" uid="uid://px134e4jtd8d" path="res://assets/weapons/projectile/holy_grimoire_proj-export.png" id="3_3tccq"]
+[ext_resource type="Script" path="res://scripts/item/weapon/circular_weapon.gd" id="4_8spbq"]
+[ext_resource type="Script" path="res://scripts/item/upgrade.gd" id="5_li6up"]
+
+[resource]
+script = ExtResource("4_8spbq")
+angular_speed = 350
+radius = 75
+amount = 6
+damage = 6.0
+cooldown = 2.0
+speed = 0.0
+projectile_node = ExtResource("2_8w7rl")
+projectile_texture = ExtResource("3_3tccq")
+upgrades = Array[ExtResource("5_li6up")]([])
+title = "Holy Grimoire"
+icon = ExtResource("1_0x221")

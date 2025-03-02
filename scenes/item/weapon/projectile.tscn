@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://djmv1eusnkhtn"]
 
-[ext_resource type="Script" path="res://scripts/player/projectile.gd" id="1_pddyw"]
+[ext_resource type="Script" path="res://scripts/item/weapon/projectile.gd" id="1_61td1"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_jxslo"]
 size = Vector2(10, 10)
@@ -40,7 +40,7 @@ turbulence_influence_max = 0.3
 [node name="projectile" type="Area2D"]
 collision_layer = 0
 collision_mask = 2
-script = ExtResource("1_pddyw")
+script = ExtResource("1_61td1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = SubResource("PlaceholderTexture2D_jxslo")
@@ -54,5 +54,6 @@ shape = SubResource("RectangleShape2D_wqrgv")
 amount = 200
 process_material = SubResource("ParticleProcessMaterial_k5a07")
 
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_screen_exited"]

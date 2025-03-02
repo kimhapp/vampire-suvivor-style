@@ -11,9 +11,15 @@ config_version=5
 [application]
 
 config/name="Vampire Suvivor Style"
-run/main_scene="res://scenes/level/test.tscn"
+run/main_scene="res://scenes/UI/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+SoundManager="*res://scenes/sound/sound_manager.tscn"
+SaveData="*res://scenes/save_data.tscn"
+Persistence="*res://scenes/player/persistence.tscn"
 
 [display]
 
@@ -37,6 +43,10 @@ folder_colors={
 "res://scripts/": "orange",
 "res://shaders/": "red"
 }
+
+[gui]
+
+theme/custom_font="res://assets/font/Minecraftia-Regular.ttf"
 
 [input]
 

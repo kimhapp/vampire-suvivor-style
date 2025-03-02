@@ -1,16 +1,20 @@
-[gd_resource type="Resource" script_class="SingleShot" load_steps=5 format=3 uid="uid://cq6ma8qwyc5fx"]
+[gd_resource type="Resource" script_class="SingleShot" load_steps=7 format=3 uid="uid://cq6ma8qwyc5fx"]
 
-[ext_resource type="PackedScene" uid="uid://djmv1eusnkhtn" path="res://scenes/player/projectile.tscn" id="1_k0mp1"]
-[ext_resource type="Script" path="res://scripts/player/single_shot.gd" id="2_ra0q1"]
+[ext_resource type="PackedScene" uid="uid://djmv1eusnkhtn" path="res://scenes/item/weapon/projectile.tscn" id="1_k0mp1"]
+[ext_resource type="Script" path="res://scripts/item/weapon/single_shot.gd" id="2_ra0q1"]
 [ext_resource type="Texture2D" uid="uid://wkjyxo6q8h52" path="res://assets/weapons/Sprite-Holy_Wand.png" id="3_q2cor"]
-[ext_resource type="Script" path="res://scripts/player/upgrade.gd" id="4_itbrf"]
+[ext_resource type="AudioStream" uid="uid://rlvyffpbk68j" path="res://assets/sfx/retro-laser-2-236680.mp3" id="3_s4x02"]
+[ext_resource type="Script" path="res://scripts/item/upgrade.gd" id="4_itbrf"]
+[ext_resource type="Texture2D" uid="uid://bs3a6y3r84mbp" path="res://assets/weapons/projectile/magic_wand_proj-export.png" id="5_axcbg"]
 
 [resource]
 script = ExtResource("2_ra0q1")
-damage = 20.0
-cooldown = 0.1
-speed = 700.0
+damage = 10.0
+cooldown = 0.2
+speed = 500.0
 projectile_node = ExtResource("1_k0mp1")
+projectile_texture = ExtResource("5_axcbg")
 upgrades = Array[ExtResource("4_itbrf")]([])
+sound = ExtResource("3_s4x02")
 title = "Holy Wand"
-texture = ExtResource("3_q2cor")
+icon = ExtResource("3_q2cor")

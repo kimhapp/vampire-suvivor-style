@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="PassiveItem" load_steps=7 format=3 uid="uid://dfsula4nextkq"]
 
-[ext_resource type="Script" path="res://scripts/item/passive_item.gd" id="1_ympdh"]
+[ext_resource type="Script" path="res://scripts/item/passive_item/passive_item.gd" id="1_ympdh"]
 [ext_resource type="Texture2D" uid="uid://2r0dg3rt6sek" path="res://assets/passive_items/Sprite-Armor.png" id="2_6bitr"]
 [ext_resource type="Script" path="res://scripts/player/stats.gd" id="3_chtfw"]
 
@@ -50,4 +50,4 @@ dmg_multiplier = 0.0
 script = ExtResource("1_ympdh")
 upgrades = Array[ExtResource("3_chtfw")]([SubResource("Resource_ph0i7"), SubResource("Resource_12vwd"), SubResource("Resource_jk8vx")])
 title = "Armor"
-texture = ExtResource("2_6bitr")
+icon = ExtResource("2_6bitr")

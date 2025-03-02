@@ -1,24 +1,42 @@
 extends CharacterBody2D
 
 var movement_speed : float = 150
-var health : float = 100:
+var health : float = 10:
 	set(value):
 		health = max(value, 0)
 		%health.value = value
-var max_health : float = 100:
+		
+		if health <= 0:
+			get_tree().paused = true
+			%back.visible = true
+var max_health : float = 10:
 	set(value):
 		max_health = value
 		%health.max_value = value
-var recovery : float = 0
-var armor : float = 0
+var recovery : float = 0:
+	set(value):
+		recovery = value
+		%recovery.text = "R : " + str(value)
+var armor : float = 0:
+	set(value):
+		armor = value
+		%armor.text = "A : " + str(value)
 var shield : float = 0
-var dmg_multiplier : float = 1.0
+var dmg_multiplier : float = 1.0:
+	set(value):
+		dmg_multiplier = value
+		%dmg_multiplier.text = "D : " + str(value)
 var attack_range : float = 150
 var magnet : float = 0:
 	set(value):
 		magnet = value
 		%magnet.shape.radius = 50 + value
 var growth : float = 1
+
+var gold : int = 0:
+	set(value):
+		gold = value
+		%gold.text = "Gold " + str(value)
 
 var XP : int = 0:
 	set(value):
@@ -39,13 +57,17 @@ var level : int = 1:
 var nearest_enemy : CharacterBody2D
 var nearest_enemy_distance : float = attack_range
 
+@onready var pivot: Marker2D = $cursor/Cursor/pivot
+
+var direction : Vector2 # For flipping sprite
+
 func _ready() -> void:
-	magnet = 0
+	health = max_health
+	Persistence.gain_bonus_stats(self)
 
 func _physics_process(delta: float) -> void:
 	if is_instance_valid(nearest_enemy):
 		nearest_enemy_distance = nearest_enemy.separation
-		print(nearest_enemy.name)
 	else:
 		nearest_enemy_distance = attack_range
 		nearest_enemy = null
@@ -57,7 +79,7 @@ func _physics_process(delta: float) -> void:
 
 func take_damage(amount):
 	# Armor will only reduce 90% of incoming dmg max
-	health -= max(amount - armor, amount * 0.1)
+	health -= max(amount * (amount / (amount + armor)), amount * 0.1)
 	print(amount)
 
 func _on_self_damage_body_entered(body: Node2D) -> void:
@@ -79,3 +101,9 @@ func check_XP():
 func _on_magnet_area_entered(area: Area2D) -> void:
 	if area.has_method("follow"):
 		area.follow(self)
+
+func gain_gold(amount):
+	gold += amount
+
+func open_chest():
+	$UI/chest.open()

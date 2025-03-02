@@ -1,0 +1,485 @@
+[gd_scene load_steps=29 format=3 uid="uid://cd15aad1bpd8w"]
+
+[ext_resource type="Script" path="res://scripts/UI/skill_tree.gd" id="1_16axu"]
+[ext_resource type="PackedScene" uid="uid://r3ca0h4n62js" path="res://scenes/UI/skill_upgrade.tscn" id="1_i82p2"]
+[ext_resource type="Texture2D" uid="uid://c1l210ghih2f8" path="res://assets/passive_items/Sprite-Spinach.png" id="2_lmrfa"]
+[ext_resource type="Script" path="res://scripts/player/skill.gd" id="3_olqca"]
+[ext_resource type="Script" path="res://scripts/player/stats.gd" id="4_gcm7t"]
+[ext_resource type="Script" path="res://scripts/UI/gold_ui.gd" id="5_dg67p"]
+[ext_resource type="Texture2D" uid="uid://2r0dg3rt6sek" path="res://assets/passive_items/Sprite-Armor.png" id="6_i7ivb"]
+[ext_resource type="Texture2D" uid="uid://d4m4mohxu1lck" path="res://assets/passive_items/Sprite-Pummarola.png" id="7_hu2kv"]
+[ext_resource type="Theme" uid="uid://dwse8ko0ouqyu" path="res://theme/main_theme.tres" id="8_0dqjh"]
+[ext_resource type="Script" path="res://scripts/UI/start_button.gd" id="9_rt6uy"]
+
+[sub_resource type="Resource" id="Resource_lgh8b"]
+script = ExtResource("4_gcm7t")
+description = "+10% Damage Boost"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+shield = 0.0
+movement_speed = 0.0
+attack_range = 0.0
+magnet = 0.0
+revival = 0
+growth = 0.0
+dmg_multiplier = 0.1
+
+[sub_resource type="Resource" id="Resource_edt7n"]
+script = ExtResource("3_olqca")
+name = "Damage Boost I"
+icon = ExtResource("2_lmrfa")
+cost = 10
+stats = SubResource("Resource_lgh8b")
+
+[sub_resource type="Resource" id="Resource_12pbf"]
+script = ExtResource("4_gcm7t")
+description = "+10% Damage Boost"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+shield = 0.0
+movement_speed = 0.0
+attack_range = 0.0
+magnet = 0.0
+revival = 0
+growth = 0.0
+dmg_multiplier = 0.1
+
+[sub_resource type="Resource" id="Resource_ndunu"]
+script = ExtResource("3_olqca")
+name = "Damage Boost II"
+icon = ExtResource("2_lmrfa")
+cost = 30
+stats = SubResource("Resource_12pbf")
+
+[sub_resource type="Resource" id="Resource_vj4p4"]
+script = ExtResource("4_gcm7t")
+description = "+20% Damage Boost"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+shield = 0.0
+movement_speed = 0.0
+attack_range = 0.0
+magnet = 0.0
+revival = 0
+growth = 0.0
+dmg_multiplier = 0.2
+
+[sub_resource type="Resource" id="Resource_aume2"]
+script = ExtResource("3_olqca")
+name = "Damage Boost III"
+icon = ExtResource("2_lmrfa")
+cost = 50
+stats = SubResource("Resource_vj4p4")
+
+[sub_resource type="Resource" id="Resource_3rhks"]
+script = ExtResource("4_gcm7t")
+description = "+2 Armor"
+max_health = 0.0
+recovery = 0.0
+armor = 2.0
+shield = 0.0
+movement_speed = 0.0
+attack_range = 0.0
+magnet = 0.0
+revival = 0
+growth = 0.0
+dmg_multiplier = 0.0
+
+[sub_resource type="Resource" id="Resource_gw73w"]
+script = ExtResource("3_olqca")
+name = "Armor I"
+icon = ExtResource("6_i7ivb")
+cost = 10
+stats = SubResource("Resource_3rhks")
+
+[sub_resource type="Resource" id="Resource_7ce3g"]
+script = ExtResource("4_gcm7t")
+description = "+2 Armor"
+max_health = 0.0
+recovery = 0.0
+armor = 2.0
+shield = 0.0
+movement_speed = 0.0
+attack_range = 0.0
+magnet = 0.0
+revival = 0
+growth = 0.0
+dmg_multiplier = 0.0
+
+[sub_resource type="Resource" id="Resource_lrs8i"]
+script = ExtResource("3_olqca")
+name = "Armor II"
+icon = ExtResource("6_i7ivb")
+cost = 30
+stats = SubResource("Resource_7ce3g")
+
+[sub_resource type="Resource" id="Resource_qilkh"]
+script = ExtResource("4_gcm7t")
+description = "+3 Armor"
+max_health = 0.0
+recovery = 0.02
+armor = 3.0
+shield = 0.0
+movement_speed = 0.0
+attack_range = 0.0
+magnet = 0.0
+revival = 0
+growth = 0.0
+dmg_multiplier = 0.0
+
+[sub_resource type="Resource" id="Resource_pfjlr"]
+script = ExtResource("3_olqca")
+name = "Armor III"
+icon = ExtResource("6_i7ivb")
+cost = 50
+stats = SubResource("Resource_qilkh")
+
+[sub_resource type="Resource" id="Resource_0ypu6"]
+script = ExtResource("4_gcm7t")
+description = "+0.2 Health/sec"
+max_health = 0.0
+recovery = 0.2
+armor = 0.0
+shield = 0.0
+movement_speed = 0.0
+attack_range = 0.0
+magnet = 0.0
+revival = 0
+growth = 0.0
+dmg_multiplier = 0.0
+
+[sub_resource type="Resource" id="Resource_00jfs"]
+script = ExtResource("3_olqca")
+name = "Recovery I"
+icon = ExtResource("7_hu2kv")
+cost = 10
+stats = SubResource("Resource_0ypu6")
+
+[sub_resource type="Resource" id="Resource_xhq7e"]
+script = ExtResource("4_gcm7t")
+description = "+0.4 Health/sec"
+max_health = 0.0
+recovery = 0.4
+armor = 0.0
+shield = 0.0
+movement_speed = 0.0
+attack_range = 0.0
+magnet = 0.0
+revival = 0
+growth = 0.0
+dmg_multiplier = 0.0
+
+[sub_resource type="Resource" id="Resource_1dwro"]
+script = ExtResource("3_olqca")
+name = "Recovery II"
+icon = ExtResource("7_hu2kv")
+cost = 30
+stats = SubResource("Resource_xhq7e")
+
+[sub_resource type="Resource" id="Resource_ooh1e"]
+script = ExtResource("4_gcm7t")
+description = "+0.6 Health/sec"
+max_health = 0.0
+recovery = 0.6
+armor = 0.0
+shield = 0.0
+movement_speed = 0.0
+attack_range = 0.0
+magnet = 0.0
+revival = 0
+growth = 0.0
+dmg_multiplier = 0.0
+
+[sub_resource type="Resource" id="Resource_g4mex"]
+script = ExtResource("3_olqca")
+name = "Recovery III"
+icon = ExtResource("7_hu2kv")
+cost = 50
+stats = SubResource("Resource_ooh1e")
+
+[node name="main_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="skill_tree" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_16axu")
+
+[node name="dmg_boost" type="Control" parent="skill_tree"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="skill_upgrade" parent="skill_tree/dmg_boost" instance=ExtResource("1_i82p2")]
+layout_mode = 0
+offset_left = -148.0
+offset_top = -8.0
+offset_right = -108.0
+offset_bottom = 32.0
+skill = SubResource("Resource_edt7n")
+
+[node name="skill_upgrade2" parent="skill_tree/dmg_boost" instance=ExtResource("1_i82p2")]
+layout_mode = 0
+offset_left = -212.0
+offset_top = -8.0
+offset_right = -172.0
+offset_bottom = 32.0
+skill = SubResource("Resource_ndunu")
+
+[node name="skill_upgrade3" parent="skill_tree/dmg_boost" instance=ExtResource("1_i82p2")]
+layout_mode = 0
+offset_left = -276.0
+offset_top = -8.0
+offset_right = -236.0
+offset_bottom = 32.0
+skill = SubResource("Resource_aume2")
+
+[node name="armor" type="Control" parent="skill_tree"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="skill_upgrade" parent="skill_tree/armor" instance=ExtResource("1_i82p2")]
+layout_mode = 0
+offset_left = 148.0
+offset_top = -8.0
+offset_right = 188.0
+offset_bottom = 32.0
+skill = SubResource("Resource_gw73w")
+
+[node name="skill_upgrade2" parent="skill_tree/armor" instance=ExtResource("1_i82p2")]
+layout_mode = 0
+offset_left = 212.0
+offset_top = -8.0
+offset_right = 252.0
+offset_bottom = 32.0
+skill = SubResource("Resource_lrs8i")
+
+[node name="skill_upgrade3" parent="skill_tree/armor" instance=ExtResource("1_i82p2")]
+layout_mode = 0
+offset_left = 276.0
+offset_top = -8.0
+offset_right = 316.0
+offset_bottom = 32.0
+skill = SubResource("Resource_pfjlr")
+
+[node name="recovery" type="Control" parent="skill_tree"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="skill_upgrade" parent="skill_tree/recovery" instance=ExtResource("1_i82p2")]
+layout_mode = 0
+offset_top = -32.0
+offset_bottom = 8.0
+skill = SubResource("Resource_00jfs")
+
+[node name="skill_upgrade2" parent="skill_tree/recovery" instance=ExtResource("1_i82p2")]
+layout_mode = 0
+offset_top = -88.0
+offset_bottom = -48.0
+skill = SubResource("Resource_1dwro")
+
+[node name="skill_upgrade3" parent="skill_tree/recovery" instance=ExtResource("1_i82p2")]
+layout_mode = 0
+offset_top = -144.0
+offset_bottom = -104.0
+skill = SubResource("Resource_g4mex")
+
+[node name="menu" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="start" type="Button" parent="menu"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -88.0
+offset_right = -14.0
+offset_bottom = -74.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("8_0dqjh")
+text = "Start
+"
+script = ExtResource("9_rt6uy")
+
+[node name="upgrades" type="Button" parent="menu"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -192.0
+offset_top = 12.0
+offset_right = -69.0
+offset_bottom = 55.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "Upgrades"
+
+[node name="beastiary" type="Button" parent="menu"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 64.0
+offset_top = 12.0
+offset_right = 185.0
+offset_bottom = 55.0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "Beastiary"
+
+[node name="beastiary" type="Panel" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="beastiary"]
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 48.0
+offset_top = -148.0
+offset_right = 298.0
+offset_bottom = 102.0
+grow_vertical = 2
+
+[node name="enemy_list" type="VBoxContainer" parent="beastiary/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="info" type="Panel" parent="beastiary"]
+custom_minimum_size = Vector2(250, 250)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -296.0
+offset_top = -148.0
+offset_right = -46.0
+offset_bottom = 102.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="beastiary/info"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -37.0
+offset_top = 16.0
+offset_right = 43.0
+offset_bottom = 96.0
+grow_horizontal = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="beastiary/info"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 16.0
+offset_top = 11.0
+offset_right = 85.0
+offset_bottom = 88.0
+grow_vertical = 2
+
+[node name="name" type="Label" parent="beastiary/info/VBoxContainer"]
+layout_mode = 2
+text = "Name:"
+
+[node name="damage" type="Label" parent="beastiary/info/VBoxContainer"]
+layout_mode = 2
+text = "Damage:"
+
+[node name="health" type="Label" parent="beastiary/info/VBoxContainer"]
+layout_mode = 2
+text = "Health:"
+
+[node name="gold" type="Label" parent="."]
+layout_mode = 0
+offset_left = 448.0
+offset_top = 8.0
+offset_right = 616.0
+offset_bottom = 31.0
+horizontal_alignment = 2
+script = ExtResource("5_dg67p")
+
+[node name="back" type="Button" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -56.0
+offset_right = -14.0
+offset_bottom = -13.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 25
+text = "Back"
+
+[connection signal="pressed" from="menu/start" to="menu/start" method="_on_pressed"]

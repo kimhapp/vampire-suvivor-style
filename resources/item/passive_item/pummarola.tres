@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="PassiveItem" load_steps=7 format=3 uid="uid://beyhnya7ia0l3"]
 
-[ext_resource type="Script" path="res://scripts/item/passive_item.gd" id="1_4ti5o"]
+[ext_resource type="Script" path="res://scripts/item/passive_item/passive_item.gd" id="1_4ti5o"]
 [ext_resource type="Texture2D" uid="uid://d4m4mohxu1lck" path="res://assets/passive_items/Sprite-Pummarola.png" id="2_gws4r"]
 [ext_resource type="Script" path="res://scripts/player/stats.gd" id="3_2joqi"]
 
@@ -12,7 +12,6 @@ recovery = 0.2
 armor = 0.0
 shield = 0.0
 movement_speed = 0.0
-area = 0.0
 attack_range = 0.0
 magnet = 0.0
 revival = 0
@@ -27,7 +26,6 @@ recovery = 0.4
 armor = 0.0
 shield = 0.0
 movement_speed = 0.0
-area = 0.0
 attack_range = 0.0
 magnet = 0.0
 revival = 0
@@ -42,7 +40,6 @@ recovery = 0.6
 armor = 0.0
 shield = 0.0
 movement_speed = 0.0
-area = 0.0
 attack_range = 0.0
 magnet = 0.0
 revival = 0
@@ -53,4 +50,4 @@ dmg_multiplier = 0.0
 script = ExtResource("1_4ti5o")
 upgrades = Array[ExtResource("3_2joqi")]([SubResource("Resource_66s85"), SubResource("Resource_e4o58"), SubResource("Resource_7g0xt")])
 title = "Pummarola"
-texture = ExtResource("2_gws4r")
+icon = ExtResource("2_gws4r")

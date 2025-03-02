@@ -19,9 +19,14 @@ func _physics_process(delta: float) -> void:
 		direction = (player_reference.position - position).normalized()
 		position += direction * speed * delta
 
-func follow(_target : CharacterBody2D):
+func follow(_target : CharacterBody2D, gem_flag = false):
+	if type is Chest:
+		return
+	if gem_flag == true:
+		if type is not Gem:
+			return
 	can_follow = true
 
-func _on_body_entered(body: Node2D) -> void:
+func _on_body_entered(_body: Node2D) -> void:
 	type.activate()
 	queue_free()

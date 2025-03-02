@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="PassiveItem" load_steps=7 format=3 uid="uid://chw43o58f5qct"]
 
-[ext_resource type="Script" path="res://scripts/item/passive_item.gd" id="1_o2ber"]
+[ext_resource type="Script" path="res://scripts/item/passive_item/passive_item.gd" id="1_o2ber"]
 [ext_resource type="Texture2D" uid="uid://bkdfh5776n30h" path="res://assets/passive_items/Sprite-Wings.png" id="2_f8nqf"]
 [ext_resource type="Script" path="res://scripts/player/stats.gd" id="3_2s6ms"]
 
@@ -12,7 +12,6 @@ recovery = 0.0
 armor = 0.0
 shield = 0.0
 movement_speed = 25.0
-area = 0.0
 attack_range = 0.0
 magnet = 0.0
 revival = 0
@@ -27,7 +26,6 @@ recovery = 0.0
 armor = 0.0
 shield = 0.0
 movement_speed = 30.0
-area = 0.0
 attack_range = 0.0
 magnet = 0.0
 revival = 0
@@ -42,7 +40,6 @@ recovery = 0.0
 armor = 0.0
 shield = 0.0
 movement_speed = 35.0
-area = 0.0
 attack_range = 0.0
 magnet = 0.0
 revival = 0
@@ -53,4 +50,4 @@ dmg_multiplier = 0.0
 script = ExtResource("1_o2ber")
 upgrades = Array[ExtResource("3_2s6ms")]([SubResource("Resource_tkrkj"), SubResource("Resource_gv7i2"), SubResource("Resource_dxu8u")])
 title = "Wings"
-texture = ExtResource("2_f8nqf")
+icon = ExtResource("2_f8nqf")

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="PassiveItem" load_steps=7 format=3 uid="uid://cts12s2jtnohv"]
 
-[ext_resource type="Script" path="res://scripts/item/passive_item.gd" id="1_qv71u"]
+[ext_resource type="Script" path="res://scripts/item/passive_item/passive_item.gd" id="1_qv71u"]
 [ext_resource type="Texture2D" uid="uid://c1l210ghih2f8" path="res://assets/passive_items/Sprite-Spinach.png" id="2_84g0h"]
 [ext_resource type="Script" path="res://scripts/player/stats.gd" id="3_t44py"]
 
@@ -12,7 +12,6 @@ recovery = 0.0
 armor = 0.0
 shield = 0.0
 movement_speed = 0.0
-area = 0.0
 attack_range = 0.0
 magnet = 0.0
 revival = 0
@@ -27,7 +26,6 @@ recovery = 0.0
 armor = 0.0
 shield = 0.0
 movement_speed = 0.0
-area = 0.0
 attack_range = 0.0
 magnet = 0.0
 revival = 0
@@ -42,7 +40,6 @@ recovery = 0.0
 armor = 0.0
 shield = 0.0
 movement_speed = 0.0
-area = 0.0
 attack_range = 0.0
 magnet = 0.0
 revival = 0
@@ -53,4 +50,4 @@ dmg_multiplier = 0.3
 script = ExtResource("1_qv71u")
 upgrades = Array[ExtResource("3_t44py")]([SubResource("Resource_ndfh1"), SubResource("Resource_n0y8e"), SubResource("Resource_4aj16")])
 title = "Spinach"
-texture = ExtResource("2_84g0h")
+icon = ExtResource("2_84g0h")

@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="PassiveItem" load_steps=7 format=3 uid="uid://dtcacpbi4vfbj"]
 
-[ext_resource type="Script" path="res://scripts/item/passive_item.gd" id="1_sc1ye"]
+[ext_resource type="Script" path="res://scripts/item/passive_item/passive_item.gd" id="1_sc1ye"]
 [ext_resource type="Texture2D" uid="uid://cwxrfgtpous64" path="res://assets/passive_items/Sprite-Crown.png" id="2_41uvb"]
 [ext_resource type="Script" path="res://scripts/player/stats.gd" id="3_hca13"]
 
@@ -12,7 +12,6 @@ recovery = 0.0
 armor = 0.0
 shield = 0.0
 movement_speed = 0.0
-area = 0.0
 attack_range = 0.0
 magnet = 0.0
 revival = 0
@@ -27,7 +26,6 @@ recovery = 0.0
 armor = 0.0
 shield = 0.0
 movement_speed = 0.0
-area = 0.0
 attack_range = 0.0
 magnet = 0.0
 revival = 0
@@ -42,7 +40,6 @@ recovery = 0.0
 armor = 0.0
 shield = 0.0
 movement_speed = 0.0
-area = 0.0
 attack_range = 0.0
 magnet = 0.0
 revival = 0
@@ -53,4 +50,4 @@ dmg_multiplier = 0.0
 script = ExtResource("1_sc1ye")
 upgrades = Array[ExtResource("3_hca13")]([SubResource("Resource_qj8dl"), SubResource("Resource_omn6x"), SubResource("Resource_vhwpx")])
 title = "Crown"
-texture = ExtResource("2_41uvb")
+icon = ExtResource("2_41uvb")

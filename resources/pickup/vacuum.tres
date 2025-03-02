@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Vacuum" load_steps=4 format=3 uid="uid://b3llg6m3bs1f4"]
+
+[ext_resource type="Texture2D" uid="uid://bqxak5j2n8u3x" path="res://assets/item/Magnet.png" id="1_yl5t5"]
+[ext_resource type="Script" path="res://scripts/item/pickup/vacuum.gd" id="2_ylnlj"]
+[ext_resource type="AudioStream" uid="uid://yuc7owor4pgx" path="res://assets/sfx/space-slash-236689.mp3" id="3_hypkg"]
+
+[resource]
+script = ExtResource("2_ylnlj")
+title = "Vacuum"
+icon = ExtResource("1_yl5t5")
+description = "Collect all gems on the map"
+sound = ExtResource("3_hypkg")

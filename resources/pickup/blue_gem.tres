@@ -1,11 +1,13 @@
-[gd_resource type="Resource" script_class="Gem" load_steps=3 format=3 uid="uid://cyoso6tt0qeeh"]
+[gd_resource type="Resource" script_class="Gem" load_steps=4 format=3 uid="uid://cyoso6tt0qeeh"]
 
-[ext_resource type="Texture2D" uid="uid://bu3kuk2aqwm61" path="res://assets/Coin_Gems/Crystal.png" id="1_qkq8b"]
-[ext_resource type="Script" path="res://scripts/item/gem.gd" id="2_7w2r3"]
+[ext_resource type="Texture2D" uid="uid://dmt564mc5flnt" path="res://assets/Coin_Gems/Sprite-Experience_Gem.png" id="1_1nt16"]
+[ext_resource type="Script" path="res://scripts/item/pickup/gem.gd" id="2_7w2r3"]
+[ext_resource type="AudioStream" uid="uid://b7gplljo06c2u" path="res://assets/sfx/retro-coin-1-236677.mp3" id="3_gn83y"]
 
 [resource]
 script = ExtResource("2_7w2r3")
 XP = 3.0
 title = "Blue Gem"
-icon = ExtResource("1_qkq8b")
+icon = ExtResource("1_1nt16")
 description = "Blue gem that gives small XP"
+sound = ExtResource("3_gn83y")

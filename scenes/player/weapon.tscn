@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://bod3nh54h1cpx"]
+
+[ext_resource type="Texture2D" uid="uid://ttpt17osnh3v" path="res://assets/weapons/Sprite-Magic_Wand.png" id="2_5rkmp"]
+
+[sub_resource type="GDScript" id="GDScript_t2jld"]
+script/source = "extends Marker2D
+
+func _physics_process(delta: float) -> void:
+	look_at(get_global_mouse_position())
+	
+	rotation_degrees = wrap(rotation_degrees, 0, 360)
+	if rotation_degrees > 90 and rotation_degrees < 270:
+		scale.y = -1
+	else:
+		scale.y = 1
+"
+
+[node name="weapon" type="Marker2D"]
+rotation = 0.785398
+script = SubResource("GDScript_t2jld")
+
+[node name="sprite" type="Sprite2D" parent="."]
+position = Vector2(56, -56)
+texture = ExtResource("2_5rkmp")
+flip_h = true
+
+[node name="pivot" type="Marker2D" parent="sprite"]
+position = Vector2(24, -24)

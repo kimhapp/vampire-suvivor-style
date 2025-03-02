@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="PassiveItem" load_steps=7 format=3 uid="uid://c85hjmwa8g67b"]
 
-[ext_resource type="Script" path="res://scripts/item/passive_item.gd" id="1_jwwee"]
+[ext_resource type="Script" path="res://scripts/item/passive_item/passive_item.gd" id="1_jwwee"]
 [ext_resource type="Texture2D" uid="uid://c83a7l47l8f7" path="res://assets/passive_items/Sprite-Attractorb.png" id="2_up0gh"]
 [ext_resource type="Script" path="res://scripts/player/stats.gd" id="3_0i68d"]
 
@@ -50,4 +50,4 @@ dmg_multiplier = 0.0
 script = ExtResource("1_jwwee")
 upgrades = Array[ExtResource("3_0i68d")]([SubResource("Resource_0vnds"), SubResource("Resource_2hv1b"), SubResource("Resource_8eagt")])
 title = "Attract Orb"
-texture = ExtResource("2_up0gh")
+icon = ExtResource("2_up0gh")

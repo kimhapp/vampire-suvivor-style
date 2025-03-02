@@ -1,0 +1,61 @@
+[gd_resource type="Resource" script_class="Lighting" load_steps=15 format=3 uid="uid://b4rwkno7tjoyk"]
+
+[ext_resource type="Texture2D" uid="uid://cqxs0njixe5ec" path="res://assets/weapons/Icon-Lightning_Ring.png" id="1_5gdym"]
+[ext_resource type="Resource" uid="uid://ckve23waalqu1" path="res://resources/weapon/thunder_loop.tres" id="1_kmsgv"]
+[ext_resource type="PackedScene" uid="uid://djmv1eusnkhtn" path="res://scenes/item/weapon/projectile.tscn" id="2_2ys6s"]
+[ext_resource type="Resource" uid="uid://dtcacpbi4vfbj" path="res://resources/item/passive_item/crown.tres" id="3_8lrjw"]
+[ext_resource type="Texture2D" uid="uid://cf71nxq4aowgm" path="res://assets/weapons/projectile/lightning_strike.png" id="3_ngpfv"]
+[ext_resource type="Script" path="res://scripts/item/weapon/lighting.gd" id="4_mg8gk"]
+[ext_resource type="Script" path="res://scripts/item/upgrade.gd" id="5_wuswb"]
+[ext_resource type="Script" path="res://scripts/item/weapon/lightning_upgrade.gd" id="6_tcanw"]
+[ext_resource type="AudioStream" uid="uid://bs5eby1pdhdaf" path="res://assets/sfx/loud-thunder-7932.mp3" id="7_8j8o3"]
+
+[sub_resource type="Resource" id="Resource_7giwj"]
+script = ExtResource("6_tcanw")
+amount = 1
+damage = 0.0
+cooldown = 0.0
+description = "+1 Lightning Strikes"
+
+[sub_resource type="Resource" id="Resource_mifni"]
+script = ExtResource("6_tcanw")
+amount = 0
+damage = 2.0
+cooldown = 0.0
+description = "+2 Damage"
+
+[sub_resource type="Resource" id="Resource_3j7w1"]
+script = ExtResource("6_tcanw")
+amount = 0
+damage = 0.0
+cooldown = -1.0
+description = "-1 Second Cooldown"
+
+[sub_resource type="Resource" id="Resource_3y5ef"]
+script = ExtResource("6_tcanw")
+amount = 1
+damage = 0.0
+cooldown = 0.0
+description = "+1 Lightning Strikes"
+
+[sub_resource type="Resource" id="Resource_o6xpi"]
+script = ExtResource("6_tcanw")
+amount = 0
+damage = 2.0
+cooldown = 0.0
+description = "+2 Damage"
+
+[resource]
+script = ExtResource("4_mg8gk")
+amount = 5
+damage = 3.0
+cooldown = 5.0
+speed = 0.0
+projectile_node = ExtResource("2_2ys6s")
+projectile_texture = ExtResource("3_ngpfv")
+upgrades = Array[ExtResource("5_wuswb")]([SubResource("Resource_7giwj"), SubResource("Resource_mifni"), SubResource("Resource_3j7w1"), SubResource("Resource_3y5ef"), SubResource("Resource_o6xpi")])
+item_needed = ExtResource("3_8lrjw")
+evolution = ExtResource("1_kmsgv")
+sound = ExtResource("7_8j8o3")
+title = "Lightning Ring"
+icon = ExtResource("1_5gdym")

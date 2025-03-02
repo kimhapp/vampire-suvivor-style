@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://r3ca0h4n62js"]
+
+[ext_resource type="Script" path="res://scripts/UI/skill_upgrade_button.gd" id="1_g5rbu"]
+
+[node name="skill_upgrade" type="TextureButton"]
+offset_right = 40.0
+offset_bottom = 40.0
+toggle_mode = true
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("1_g5rbu")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 1
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

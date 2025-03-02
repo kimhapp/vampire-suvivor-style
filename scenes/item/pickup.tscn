@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://d131idbw2sqfx"]
 
-[ext_resource type="Script" path="res://scripts/item/pickup.gd" id="1_jqapb"]
+[ext_resource type="Script" path="res://scripts/item/pickup/pickup.gd" id="1_jqapb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_70tvj"]
 
-[node name="pickup" type="Area2D"]
+[node name="pickup" type="Area2D" groups=["pickups"]]
 collision_layer = 4
 script = ExtResource("1_jqapb")
 

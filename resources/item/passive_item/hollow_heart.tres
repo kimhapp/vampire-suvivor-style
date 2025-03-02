@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="PassiveItem" load_steps=7 format=3 uid="uid://cxyeo1dbcbbmq"]
 
-[ext_resource type="Script" path="res://scripts/item/passive_item.gd" id="1_on0i0"]
+[ext_resource type="Script" path="res://scripts/item/passive_item/passive_item.gd" id="1_on0i0"]
 [ext_resource type="Texture2D" uid="uid://cppgn04ux51bk" path="res://assets/passive_items/Sprite-Hollow_Heart.png" id="2_fyphd"]
 [ext_resource type="Script" path="res://scripts/player/stats.gd" id="3_3vw17"]
 
@@ -12,7 +12,6 @@ recovery = 0.0
 armor = 0.0
 shield = 0.0
 movement_speed = 0.0
-area = 0.0
 attack_range = 0.0
 magnet = 0.0
 revival = 0
@@ -27,7 +26,6 @@ recovery = 0.0
 armor = 0.0
 shield = 0.0
 movement_speed = 0.0
-area = 0.0
 attack_range = 0.0
 magnet = 0.0
 revival = 0
@@ -42,7 +40,6 @@ recovery = 0.0
 armor = 0.0
 shield = 0.0
 movement_speed = 0.0
-area = 0.0
 attack_range = 0.0
 magnet = 0.0
 revival = 0
@@ -53,4 +50,4 @@ dmg_multiplier = 0.0
 script = ExtResource("1_on0i0")
 upgrades = Array[ExtResource("3_3vw17")]([SubResource("Resource_inubt"), SubResource("Resource_1w60c"), SubResource("Resource_tk60l")])
 title = "Hollow Heart"
-texture = ExtResource("2_fyphd")
+icon = ExtResource("2_fyphd")
