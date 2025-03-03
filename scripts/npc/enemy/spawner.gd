@@ -30,14 +30,14 @@ func _physics_process(_delta: float) -> void:
 func spawn(pos : Vector2, elite : bool = false):
 	if not can_spawn and not elite:
 		return
-	
+
 	var enemy_instance = enemy.instantiate()
-	
+
 	enemy_instance.type = enemy_types[min(minute, enemy_types.size() - 1)]
 	enemy_instance.position = pos
 	enemy_instance.player_reference = player
 	enemy_instance.elite = elite
-	
+
 	get_tree().current_scene.add_child(enemy_instance)
 
 func get_random_position() -> Vector2:

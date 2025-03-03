@@ -1,0 +1,12 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://bmklb4epx4sev"]
+
+[ext_resource type="Texture2D" uid="uid://ber4bm58e256o" path="res://assets/GUI/panel.png" id="1_lgkeb"]
+
+[resource]
+texture = ExtResource("1_lgkeb")
+texture_margin_left = 7.0
+texture_margin_top = 7.0
+texture_margin_right = 7.0
+texture_margin_bottom = 7.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2

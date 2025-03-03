@@ -5,7 +5,7 @@ var health : float = 10:
 	set(value):
 		health = max(value, 0)
 		%health.value = value
-		
+
 		if health <= 0:
 			get_tree().paused = true
 			%back.visible = true
@@ -48,7 +48,7 @@ var level : int = 1:
 		level = value
 		%level.text = "Lvl " + str(value)
 		%options.show_option()
-		
+
 		if level >= 3:
 			%XP.max_value = 20
 		elif level >= 7:
@@ -71,7 +71,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		nearest_enemy_distance = attack_range
 		nearest_enemy = null
-	
+
 	velocity = Input.get_vector("left", "right", "up", "down") * movement_speed
 	move_and_collide(velocity * delta)
 	check_XP()

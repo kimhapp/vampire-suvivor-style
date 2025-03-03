@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cjrm5ntaobm5y" path="res://assets/item/Strawberry cake.png" id="1_ib7ql"]
 [ext_resource type="Script" path="res://scripts/item/pickup/health.gd" id="2_ee2uh"]
-[ext_resource type="AudioStream" uid="uid://cc8nurqx6gbl1" path="res://assets/sfx/retro-powerup-1-236686.mp3" id="3_ih8qn"]
+[ext_resource type="AudioStream" uid="uid://cc8nurqx6gbl1" path="res://assets/sfx/pickup/retro-powerup-1-236686.mp3" id="3_ih8qn"]
 
 [resource]
 script = ExtResource("2_ee2uh")

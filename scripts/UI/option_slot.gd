@@ -3,7 +3,7 @@ extends TextureButton
 @export var item : Item:
 	set(value):
 		item = value
-		
+
 		if value.upgrades.size() > 0 and value.upgrades.size() + 1 != value.level:
 			texture_normal = value.icon
 			$Label.text = "Lvl" + str(value.level + 1)

@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://djmv1eusnkhtn" path="res://scenes/item/weapon/projectile.tscn" id="3_ibama"]
 [ext_resource type="Texture2D" uid="uid://ttpt17osnh3v" path="res://assets/weapons/Sprite-Magic_Wand.png" id="3_oar4l"]
 [ext_resource type="Script" path="res://scripts/item/upgrade.gd" id="4_k7xx3"]
-[ext_resource type="AudioStream" uid="uid://didtylh5aeps8" path="res://assets/sfx/retro-laser-1-236669.mp3" id="5_78yne"]
+[ext_resource type="AudioStream" uid="uid://didtylh5aeps8" path="res://assets/sfx/weapon/retro-laser-1-236669.mp3" id="5_78yne"]
 [ext_resource type="Script" path="res://scripts/item/weapon/projectile_upgrade.gd" id="5_k4y55"]
 [ext_resource type="Texture2D" uid="uid://bs3a6y3r84mbp" path="res://assets/weapons/projectile/magic_wand_proj-export.png" id="7_tiee7"]
 

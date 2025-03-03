@@ -40,7 +40,7 @@ func check_separation():
 	separation = (player_reference.position - position).length()
 	if separation >= 500 and not elite:
 		queue_free()
-	
+
 	if separation < player_reference.nearest_enemy_distance:
 		player_reference.nearest_enemy = self
 
@@ -48,7 +48,7 @@ func knockback_update(delta):
 	velocity = (player_reference.position - position).normalized() * speed
 	knockback = knockback.move_toward(Vector2.ZERO, 1)
 	velocity += knockback
-	
+
 	var collider = move_and_collide(velocity * delta)
 	if collider:
 		collider.get_collider().knockback = (collider.get_collider().global_position -
@@ -65,23 +65,23 @@ func take_damage(amount):
 	tween.tween_property($Sprite2D, "modulate", Color(1, 0, 0.07), 0.2)
 	tween.chain().tween_property($Sprite2D, "modulate", Color(1, 1, 1), 0.2)
 	tween.bind_node(self)
-	
+
 	damage_popup(amount)
 	health -= amount
 
 func drop_item():
 	if type.drops.size() == 0:
 		return
-	
+
 	var item = type.drops.pick_random()
 	if elite:
 		item = load("res://resources/pickup/boss_chest.tres")
-	
+
 	var item_to_drop = drop.instantiate()
-	
+
 	item_to_drop.type = item
 	item_to_drop.position = position
 	item_to_drop.player_reference = player_reference
-	
+
 	get_tree().current_scene.call_deferred("add_child", item_to_drop)
 	queue_free()

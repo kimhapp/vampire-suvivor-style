@@ -8,7 +8,7 @@
 [ext_resource type="Script" path="res://scripts/item/weapon/lighting.gd" id="4_mg8gk"]
 [ext_resource type="Script" path="res://scripts/item/upgrade.gd" id="5_wuswb"]
 [ext_resource type="Script" path="res://scripts/item/weapon/lightning_upgrade.gd" id="6_tcanw"]
-[ext_resource type="AudioStream" uid="uid://bs5eby1pdhdaf" path="res://assets/sfx/loud-thunder-7932.mp3" id="7_8j8o3"]
+[ext_resource type="AudioStream" uid="uid://bs5eby1pdhdaf" path="res://assets/sfx/weapon/loud-thunder-7932.mp3" id="7_8j8o3"]
 
 [sub_resource type="Resource" id="Resource_7giwj"]
 script = ExtResource("6_tcanw")
