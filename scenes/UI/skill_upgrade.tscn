@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://r3ca0h4n62js"]
+[gd_scene load_steps=3 format=3 uid="uid://r3ca0h4n62js"]
 
 [ext_resource type="Script" path="res://scripts/UI/skill_upgrade_button.gd" id="1_g5rbu"]
+[ext_resource type="PackedScene" uid="uid://d3fn5a2x1fxk4" path="res://scenes/UI/line_2d.tscn" id="2_w4eok"]
 
 [node name="skill_upgrade" type="TextureButton"]
 offset_right = 40.0
@@ -15,5 +16,9 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 mouse_filter = 1
+
+[node name="connection" parent="." instance=ExtResource("2_w4eok")]
+
+[node name="outline" parent="." instance=ExtResource("2_w4eok")]
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]
