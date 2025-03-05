@@ -34,13 +34,10 @@ func set_reward():
 	var chance = randf_range(0, 1)
 	if chance < 0.5:
 		upgrade_items(0, 2)
-		print("rare")
 	elif chance < 0.75:
 		upgrade_items(0, 3)
-		print("epic")
 	else:
 		upgrade_items(0, 5)
-		print("legendary")
 
 func upgrade_items(start, end):
 	for index in range(start, end):
@@ -51,7 +48,11 @@ func upgrade_items(start, end):
 		else:
 			var selected_upgrade : Item
 			selected_upgrade = upgrades.pick_random()
-			rewards.get_child(index).texture = selected_upgrade.icon
+			
+			if selected_upgrade is Weapon and selected_upgrade.max_level_reached():
+				rewards.get_child(index).texture = selected_upgrade.evolution.icon
+			else:
+				rewards.get_child(index).texture = selected_upgrade.icon
 			selected_upgrade.upgrade_item()
 
 func clear_reward():

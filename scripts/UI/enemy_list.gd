@@ -14,8 +14,6 @@ func dir_contents():
 		dir.list_dir_begin()
 		var filename = dir.get_next()
 		while filename != "":
-			print("Found file: " + filename)
-			
 			var enemy_resources : Enemy = load(path + filename)
 			enemies.append(enemy_resources)
 			
@@ -27,7 +25,6 @@ func dir_contents():
 			filename = dir.get_next()
 	else:
 		print("An error occured")
-	print(enemies)
 
 func _on_pressed(button : Button):
 	var index = button.get_index()

@@ -3,13 +3,13 @@ extends CharacterBody2D
 var movement_speed : float = 150
 var health : float = 10:
 	set(value):
-		health = max(value, 0)
+		health = value
 		%health.value = value
 
 		if health <= 0:
 			get_tree().paused = true
 			%back.visible = true
-var max_health : float = 10:
+var max_health : float = 100:
 	set(value):
 		max_health = value
 		%health.max_value = value
@@ -31,7 +31,8 @@ var magnet : float = 0:
 	set(value):
 		magnet = value
 		%magnet.shape.radius = 50 + value
-var growth : float = 1
+var growth : float = 1.0
+var luck : float = 1.0
 
 var gold : int = 0:
 	set(value):
@@ -80,7 +81,6 @@ func _physics_process(delta: float) -> void:
 func take_damage(amount):
 	# Armor will only reduce 90% of incoming dmg max
 	health -= max(amount * (amount / (amount + armor)), amount * 0.1)
-	print(amount)
 
 func _on_self_damage_body_entered(body: Node2D) -> void:
 	take_damage(body.damage)
