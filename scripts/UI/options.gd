@@ -10,9 +10,9 @@ var option_slot_preload = preload("res://scenes/UI/option_slot.tscn")
 const weapon_path : String = "res://resources/weapon/"
 const passive_item_path : String = "res://resources/item/passive_item/"
 
-var every_weapons = []
-var every_passive_items = []
-var every_items = []
+var every_weapons
+var every_passive_items
+var every_items
 
 func _ready():
 	hide()
@@ -44,23 +44,24 @@ func add_option(item) -> int:
 func show_option():
 	var weapons_available = get_available_resource_in(weapons)
 	var passive_items_available = get_available_resource_in(passive_items)
+	
 	if weapons_available.size() == 0 and passive_items_available.size() == 0:
 		return
 	
 	for slot in get_children():
 		slot.queue_free()
 	
-	var option_size = 0
-	
 	var available = get_equipped_item()
 	if slot_available(weapons):
-		available.append_array(every_weapons, get_equipped_item())
+		available.append_array(get_upgradable(every_weapons, get_equipped_item()))
 	if slot_available(passive_items):
-		available.append_array(every_passive_items, get_equipped_item())
+		available.append_array(get_upgradable(every_passive_items, get_equipped_item()))
 	available.shuffle()
+
+	var option_size = 0
 	
 	for i in range(3):
-		if option_size > 3:
+		if available.size() > 0:
 			option_size += add_option(available.pop_front())
 	
 	if option_size == 0:
@@ -95,7 +96,7 @@ func get_all_items():
 	every_weapons = dir_contents(weapon_path)
 	every_passive_items = dir_contents(passive_item_path)
 	
-	every_items = every_weapons
+	every_items = every_weapons.duplicate()
 	every_items.append_array(every_passive_items)
 
 func add_weapon(item):
@@ -110,8 +111,10 @@ func add_passive_item(item):
 			slot.item = item
 			return
 
-func check_item(item):
+func check_item(item): 
 	if item in get_available_resource_in(weapons) or item in get_available_resource_in(passive_items):
+		return
+	else:
 		if item is Weapon:
 			add_weapon(item)
 		elif item is PassiveItem:

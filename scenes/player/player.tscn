@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://vjxtarbk2kq1"]
+[gd_scene load_steps=39 format=3 uid="uid://vjxtarbk2kq1"]
 
 [ext_resource type="Script" path="res://scripts/player/player.gd" id="1_24umg"]
 [ext_resource type="PackedScene" uid="uid://b7juvpc1j6366" path="res://scenes/UI/slot.tscn" id="2_0jej4"]
@@ -9,18 +9,14 @@
 [ext_resource type="Texture2D" uid="uid://bxdn1dggv32k7" path="res://assets/GUI/Exp_Bar.png" id="5_s7hlm"]
 [ext_resource type="PackedScene" uid="uid://dwv6t654jgali" path="res://scenes/UI/passive_slot.tscn" id="6_5fcxc"]
 [ext_resource type="Texture2D" uid="uid://dvpwtjgh4opqc" path="res://assets/GUI/Progress_Bar.png" id="6_53j4n"]
-[ext_resource type="Resource" uid="uid://bc0lnqwse8omx" path="res://resources/weapon/grimoire.tres" id="6_grjbr"]
-[ext_resource type="Resource" uid="uid://c85hjmwa8g67b" path="res://resources/item/passive_item/attract_orb.tres" id="7_i2qdl"]
-[ext_resource type="Resource" uid="uid://b4rwkno7tjoyk" path="res://resources/weapon/lightning_ring.tres" id="7_wul7o"]
 [ext_resource type="Script" path="res://scripts/UI/options.gd" id="7_xt6fs"]
-[ext_resource type="Resource" uid="uid://b4j4lkmt0b03t" path="res://resources/item/passive_item/candelabrador.tres" id="9_etnwm"]
-[ext_resource type="Resource" uid="uid://dtcacpbi4vfbj" path="res://resources/item/passive_item/crown.tres" id="11_7lrh0"]
 [ext_resource type="Texture2D" uid="uid://s2nxsaylk77j" path="res://assets/chest/Fantasy RPG (Toony) 32x32.png" id="12_hdmv1"]
 [ext_resource type="Script" path="res://scripts/item/pickup/chest.gd" id="12_nky0q"]
 [ext_resource type="Script" path="res://scripts/player/sprite_flip.gd" id="14_4ugje"]
 [ext_resource type="PackedScene" uid="uid://1s22u3ho5vh8" path="res://scenes/player/cursor.tscn" id="15_acd0a"]
 [ext_resource type="Script" path="res://scripts/UI/back_button.gd" id="18_0kjob"]
 [ext_resource type="Theme" uid="uid://c0tvn6xd2yv62" path="res://theme/button.tres" id="18_hgtdd"]
+[ext_resource type="Theme" uid="uid://cwsmlcj1s0ndu" path="res://theme/chest_button_theme.tres" id="18_iicuu"]
 
 [sub_resource type="Gradient" id="Gradient_5ryrp"]
 offsets = PackedFloat32Array(0.76, 1)
@@ -143,21 +139,6 @@ animations = [{
 "speed": 24.0
 }]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_32f85"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ek7y"]
-bg_color = Color(0.721569, 0.435294, 0.313726, 1)
-border_width_right = 4
-border_width_bottom = 4
-border_color = Color(0.454902, 0.247059, 0.223529, 1)
-border_blend = true
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
-shadow_size = 1
-shadow_offset = Vector2(2, 2)
-
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_iqw60"]
 size = Vector2(20, 20)
 
@@ -259,11 +240,9 @@ item = ExtResource("5_3hkud")
 
 [node name="slot2" parent="UI/weapons" instance=ExtResource("2_0jej4")]
 layout_mode = 2
-item = ExtResource("6_grjbr")
 
 [node name="slot3" parent="UI/weapons" instance=ExtResource("2_0jej4")]
 layout_mode = 2
-item = ExtResource("7_wul7o")
 
 [node name="passive_items" type="HBoxContainer" parent="UI"]
 offset_top = 70.0
@@ -272,15 +251,12 @@ offset_bottom = 110.0
 
 [node name="passive_slot" parent="UI/passive_items" instance=ExtResource("6_5fcxc")]
 layout_mode = 2
-item = ExtResource("7_i2qdl")
 
 [node name="passive_slot2" parent="UI/passive_items" instance=ExtResource("6_5fcxc")]
 layout_mode = 2
-item = ExtResource("9_etnwm")
 
 [node name="passive_slot3" parent="UI/passive_items" instance=ExtResource("6_5fcxc")]
 layout_mode = 2
-item = ExtResource("11_7lrh0")
 
 [node name="XP" type="TextureProgressBar" parent="UI"]
 unique_name_in_owner = true
@@ -324,7 +300,6 @@ particle = NodePath("../particle")
 
 [node name="chest" type="NinePatchRect" parent="UI"]
 process_mode = 3
-visible = false
 custom_minimum_size = Vector2(300, 200)
 anchors_preset = 8
 anchor_left = 0.5
@@ -351,6 +326,7 @@ sprite_frames = SubResource("SpriteFrames_5h7hg")
 animation = &"idle_boss_chest"
 
 [node name="open" type="Button" parent="UI/chest"]
+visible = false
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -363,8 +339,7 @@ offset_right = 25.0
 offset_bottom = -34.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/focus = SubResource("StyleBoxEmpty_32f85")
-theme_override_styles/normal = SubResource("StyleBoxFlat_8ek7y")
+theme = ExtResource("18_iicuu")
 text = "Open
 "
 
@@ -382,8 +357,7 @@ offset_right = 25.0
 offset_bottom = -34.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/focus = SubResource("StyleBoxEmpty_32f85")
-theme_override_styles/normal = SubResource("StyleBoxFlat_8ek7y")
+theme = ExtResource("18_iicuu")
 text = "Close"
 
 [node name="rewards" type="Control" parent="UI/chest"]

@@ -9,6 +9,6 @@
 script = ExtResource("1_oiu8o")
 title = "Eye Legs"
 texture = ExtResource("2_u1b1l")
-damage = 6.0
+damage = 1.0
 health = 10.0
 drops = Array[ExtResource("1_ai2py")]([ExtResource("2_s5ju0")])
