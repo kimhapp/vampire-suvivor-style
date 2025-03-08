@@ -32,7 +32,7 @@ var magnet : float = 0:
 		magnet = value
 		%magnet.shape.radius = 50 + value
 var growth : float = 1.0
-var luck : float = 1.0
+var luck : float = 0.5
 
 var gold : int = 0:
 	set(value):

@@ -60,7 +60,10 @@ func show_option():
 
 	var option_size = 0
 	
-	for i in range(3):
+	var chance = randf()
+	var modifier : int = 1 if (chance < owner.luck) else 0
+	
+	for i in range(3 + modifier):
 		if available.size() > 0:
 			option_size += add_option(available.pop_front())
 	
