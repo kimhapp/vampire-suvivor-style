@@ -2,6 +2,7 @@ extends TextureButton
 
 var audio_path : String
 @export var skill : Skill
+
 var enabled : bool = false :
 	set(value):
 		enabled = value

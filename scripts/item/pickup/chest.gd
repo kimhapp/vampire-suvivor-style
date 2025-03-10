@@ -4,6 +4,8 @@ extends NinePatchRect
 @onready var options: VBoxContainer = %options
 @onready var rewards: Control = $rewards
 
+const base_drop_chance = [0.7, 0.2, 0.1] # Rare, Epic, Legendary
+
 func _ready() -> void:
 	randomize()
 	hide()
@@ -32,11 +34,10 @@ func _on_close_pressed() -> void:
 func set_reward():
 	clear_reward()
 	var chance = randf()
-	var weight = [5.0, 3.0, 1.0]
 	
-	if chance < get_weighted_chance(weight, 0):
+	if chance < get_modified_chance(0):
 		upgrade_items(2, 3)
-	elif chance < get_weighted_chance(weight, 1):
+	elif chance < get_modified_chance(1):
 		upgrade_items(1, 4)
 	else:
 		upgrade_items(0, 5)
@@ -67,19 +68,21 @@ func add_gold(index):
 	rewards.get_child(index).texture = gold.icon
 	gold.activate()
 
-func get_weighted_chance(weight, index):
-	var modified_weight = []
+func get_modified_chance(index):
+	var modified_chance = base_drop_chance.duplicate()
 	var sum = 0
+
+	if owner.current_boosted_tier != owner.BOOSTED_TIER.NONE:
+		modified_chance[owner.current_boosted_tier] += owner.current_boosted_value
 	
-	for i in range(weight.size()):
-		if i == 0:
-			modified_weight.append(weight[i])
-			sum += weight[i]
-		else:
-			modified_weight.append(weight[i] * (1 + owner.luck))
-			sum += weight[i] * (1 + owner.luck)
+	for i in range(modified_chance.size()):
+		if i != 0:
+			modified_chance[i] *= (1 + owner.luck)
+		sum += modified_chance[i]
 	
-	var cumulative = 0
+	var cumulative = 0.0
+	
 	for i in range(index + 1):
-		cumulative += modified_weight[i]
+		cumulative += modified_chance[i]
+
 	return float(cumulative)/sum

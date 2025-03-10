@@ -1,11 +1,13 @@
 extends CharacterBody2D
 
+enum BOOSTED_TIER {NONE, EPIC, LEGENDARY} # For drop chance boosting
+
 var movement_speed : float = 150
 var health : float = 10:
 	set(value):
 		health = value
 		%health.value = value
-
+		
 		if health <= 0:
 			get_tree().paused = true
 			%back.visible = true
@@ -33,6 +35,8 @@ var magnet : float = 0:
 		%magnet.shape.radius = 50 + value
 var growth : float = 1.0
 var luck : float = 0.5
+var current_boosted_tier : BOOSTED_TIER
+var current_boosted_value : float = 0.0
 
 var gold : int = 0:
 	set(value):

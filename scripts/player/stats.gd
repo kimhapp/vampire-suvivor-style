@@ -1,6 +1,8 @@
 extends Resource
 class_name Stats
 
+enum BOOSTED_TIER {NONE, EPIC, LEGENDARY} # For drop chance boosting
+
 @export_multiline var description : String
 
 @export var max_health : float
@@ -13,3 +15,5 @@ class_name Stats
 @export var revival : int
 @export var growth : float
 @export var dmg_multiplier : float
+@export var boosted_tier : BOOSTED_TIER
+@export var boosted_value : float

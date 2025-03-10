@@ -1,6 +1,7 @@
 extends Control
 
 var audio_path : String
+
 func _ready() -> void:
 	menu()
 
@@ -9,12 +10,14 @@ func menu():
 	$beastiary.hide()
 	$skill_tree.hide()
 	$back.hide()
+	$equipment.hide()
 
 func skill_tree():
 	$menu.hide()
 	$beastiary.hide()
 	$skill_tree.show()
 	$back.show()
+	$equipment.hide()
 	tween_pop($skill_tree)
 
 func beastiary():
@@ -22,6 +25,15 @@ func beastiary():
 	$beastiary.show()
 	$skill_tree.hide()
 	$back.show()
+	$equipment.hide()
+	tween_pop($beastiary)
+
+func equipment():
+	$menu.hide()
+	$beastiary.hide()
+	$skill_tree.hide()
+	$back.show()
+	$equipment.show()
 	tween_pop($beastiary)
 
 func _on_upgrades_pressed() -> void:
@@ -29,6 +41,9 @@ func _on_upgrades_pressed() -> void:
 
 func _on_beastiary_pressed() -> void:
 	beastiary()
+
+func _on_equipment_pressed() -> void:
+	equipment()
 
 func _on_back_pressed() -> void:
 	menu()
