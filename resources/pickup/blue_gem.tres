@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Gem" load_steps=4 format=3 uid="uid://cyoso6tt0qeeh"]
 
 [ext_resource type="Texture2D" uid="uid://dmt564mc5flnt" path="res://assets/Coin_Gems/Sprite-Experience_Gem.png" id="1_1nt16"]
-[ext_resource type="Script" path="res://scripts/item/pickup/gem.gd" id="2_7w2r3"]
+[ext_resource type="Script" uid="uid://d0pl6oolkscm" path="res://scripts/item/pickup/gem.gd" id="2_7w2r3"]
 [ext_resource type="AudioStream" uid="uid://b7gplljo06c2u" path="res://assets/sfx/pickup/retro-coin-1-236677.mp3" id="3_gn83y"]
 
 [resource]

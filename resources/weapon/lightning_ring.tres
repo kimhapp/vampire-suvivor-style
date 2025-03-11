@@ -5,9 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://djmv1eusnkhtn" path="res://scenes/item/weapon/projectile.tscn" id="2_2ys6s"]
 [ext_resource type="Resource" uid="uid://dtcacpbi4vfbj" path="res://resources/item/passive_item/crown.tres" id="3_8lrjw"]
 [ext_resource type="Texture2D" uid="uid://cf71nxq4aowgm" path="res://assets/weapons/projectile/lightning_strike.png" id="3_ngpfv"]
-[ext_resource type="Script" path="res://scripts/item/weapon/lighting.gd" id="4_mg8gk"]
-[ext_resource type="Script" path="res://scripts/item/upgrade.gd" id="5_wuswb"]
-[ext_resource type="Script" path="res://scripts/item/weapon/lightning_upgrade.gd" id="6_tcanw"]
+[ext_resource type="Script" uid="uid://qkpwf5a1ytyi" path="res://scripts/item/weapon/lighting.gd" id="4_mg8gk"]
+[ext_resource type="Script" uid="uid://gbg033tq3ghi" path="res://scripts/item/upgrade.gd" id="5_wuswb"]
+[ext_resource type="Script" uid="uid://bw1jn08wa3bj0" path="res://scripts/item/weapon/lightning_upgrade.gd" id="6_tcanw"]
 [ext_resource type="AudioStream" uid="uid://bs5eby1pdhdaf" path="res://assets/sfx/weapon/loud-thunder-7932.mp3" id="7_8j8o3"]
 
 [sub_resource type="Resource" id="Resource_7giwj"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c0p00ql2h284p"]
 
-[ext_resource type="Script" path="res://scripts/npc/enemy/enemy.gd" id="1_21bsg"]
+[ext_resource type="Script" uid="uid://c5feyr8mvojj7" path="res://scripts/npc/enemy/enemy.gd" id="1_21bsg"]
 [ext_resource type="Texture2D" uid="uid://b5xc5bcwc1w25" path="res://assets/RPG Battlers 3/1 v1.png" id="2_1ncf6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8mr35"]

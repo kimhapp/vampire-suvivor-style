@@ -1,6 +1,6 @@
 [gd_scene load_steps=39 format=3 uid="uid://vjxtarbk2kq1"]
 
-[ext_resource type="Script" path="res://scripts/player/player.gd" id="1_24umg"]
+[ext_resource type="Script" uid="uid://c8ixwqb81ay58" path="res://scripts/player/player.gd" id="1_24umg"]
 [ext_resource type="PackedScene" uid="uid://b7juvpc1j6366" path="res://scenes/UI/slot.tscn" id="2_0jej4"]
 [ext_resource type="Texture2D" uid="uid://bu3kuk2aqwm61" path="res://assets/Coin_Gems/Crystal.png" id="2_a6ygw"]
 [ext_resource type="Texture2D" uid="uid://cyxqunxkcnktg" path="res://assets/GUI/second_panel.png" id="3_6u0jk"]
@@ -9,12 +9,12 @@
 [ext_resource type="Texture2D" uid="uid://bxdn1dggv32k7" path="res://assets/GUI/Exp_Bar.png" id="5_s7hlm"]
 [ext_resource type="PackedScene" uid="uid://dwv6t654jgali" path="res://scenes/UI/passive_slot.tscn" id="6_5fcxc"]
 [ext_resource type="Texture2D" uid="uid://dvpwtjgh4opqc" path="res://assets/GUI/Progress_Bar.png" id="6_53j4n"]
-[ext_resource type="Script" path="res://scripts/UI/options.gd" id="7_xt6fs"]
+[ext_resource type="Script" uid="uid://xm54pc6wmsjc" path="res://scripts/UI/options.gd" id="7_xt6fs"]
 [ext_resource type="Texture2D" uid="uid://s2nxsaylk77j" path="res://assets/chest/Fantasy RPG (Toony) 32x32.png" id="12_hdmv1"]
-[ext_resource type="Script" path="res://scripts/item/pickup/chest.gd" id="12_nky0q"]
-[ext_resource type="Script" path="res://scripts/player/sprite_flip.gd" id="14_4ugje"]
+[ext_resource type="Script" uid="uid://cvffes1edleu5" path="res://scripts/item/pickup/chest.gd" id="12_nky0q"]
+[ext_resource type="Script" uid="uid://d3muwb83agnri" path="res://scripts/player/sprite_flip.gd" id="14_4ugje"]
 [ext_resource type="PackedScene" uid="uid://1s22u3ho5vh8" path="res://scenes/player/cursor.tscn" id="15_acd0a"]
-[ext_resource type="Script" path="res://scripts/UI/back_button.gd" id="18_0kjob"]
+[ext_resource type="Script" uid="uid://cfxmo1xg4nean" path="res://scripts/UI/back_button.gd" id="18_0kjob"]
 [ext_resource type="Theme" uid="uid://c0tvn6xd2yv62" path="res://theme/button.tres" id="18_hgtdd"]
 [ext_resource type="Theme" uid="uid://cwsmlcj1s0ndu" path="res://theme/chest_button_theme.tres" id="18_iicuu"]
 
@@ -192,9 +192,9 @@ process_mode = 3
 visible = false
 position = Vector2(320, 0)
 amount = 100
-process_material = SubResource("ParticleProcessMaterial_jh1fy")
 texture = ExtResource("2_a6ygw")
 lifetime = 1.5
+process_material = SubResource("ParticleProcessMaterial_jh1fy")
 
 [node name="panel" type="NinePatchRect" parent="UI"]
 process_mode = 3

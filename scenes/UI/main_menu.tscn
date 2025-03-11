@@ -1,91 +1,23 @@
-[gd_scene load_steps=45 format=3 uid="uid://cd15aad1bpd8w"]
+[gd_scene load_steps=31 format=3 uid="uid://cd15aad1bpd8w"]
 
-[ext_resource type="Script" path="res://scripts/UI/skill_tree.gd" id="1_16axu"]
+[ext_resource type="Script" uid="uid://dmqtbcnsaqsm4" path="res://scripts/UI/skill_tree.gd" id="1_16axu"]
 [ext_resource type="PackedScene" uid="uid://r3ca0h4n62js" path="res://scenes/UI/skill_upgrade.tscn" id="1_i82p2"]
-[ext_resource type="Script" path="res://scripts/UI/main_menu.gd" id="1_uremf"]
+[ext_resource type="Script" uid="uid://c4obk2e41r0fy" path="res://scripts/UI/main_menu.gd" id="1_uremf"]
 [ext_resource type="StyleBox" uid="uid://2jkrr2y0o4s0" path="res://theme/second_panel.tres" id="2_54idq"]
-[ext_resource type="Texture2D" uid="uid://c1l210ghih2f8" path="res://assets/passive_items/Sprite-Spinach.png" id="2_lmrfa"]
-[ext_resource type="Script" path="res://scripts/player/skill.gd" id="3_olqca"]
-[ext_resource type="Script" path="res://scripts/player/stats.gd" id="4_gcm7t"]
-[ext_resource type="Script" path="res://scripts/UI/gold_ui.gd" id="5_dg67p"]
+[ext_resource type="Script" uid="uid://l7422fa60n04" path="res://scripts/player/skill.gd" id="3_olqca"]
+[ext_resource type="Script" uid="uid://b5j25o66xgae7" path="res://scripts/player/stats.gd" id="4_gcm7t"]
+[ext_resource type="Script" uid="uid://bd72bvrqpyqw5" path="res://scripts/UI/gold_ui.gd" id="5_dg67p"]
 [ext_resource type="Texture2D" uid="uid://2r0dg3rt6sek" path="res://assets/passive_items/Sprite-Armor.png" id="6_i7ivb"]
-[ext_resource type="Texture2D" uid="uid://d4m4mohxu1lck" path="res://assets/passive_items/Sprite-Pummarola.png" id="7_hu2kv"]
-[ext_resource type="Script" path="res://scripts/UI/start_button.gd" id="9_rt6uy"]
+[ext_resource type="Script" uid="uid://0pfa0naip777" path="res://scripts/UI/start_button.gd" id="9_rt6uy"]
 [ext_resource type="StyleBox" uid="uid://bmklb4epx4sev" path="res://theme/main_panel.tres" id="11_l6ors"]
 [ext_resource type="Theme" uid="uid://c0tvn6xd2yv62" path="res://theme/button.tres" id="12_61xx3"]
 [ext_resource type="Texture2D" uid="uid://bxv67bcysylp7" path="res://assets/GUI/third_panel.png" id="14_07lec"]
 [ext_resource type="StyleBox" uid="uid://bhkvhmpsp5gtj" path="res://theme/third_panel.tres" id="14_eg4re"]
-[ext_resource type="Script" path="res://scripts/UI/enemy_list.gd" id="15_1tydw"]
+[ext_resource type="Script" uid="uid://owel7aabtvl7" path="res://scripts/UI/enemy_list.gd" id="15_1tydw"]
 [ext_resource type="FontFile" uid="uid://b8688mslo22wu" path="res://assets/font/Minecraftia-Regular.ttf" id="15_x6iut"]
 [ext_resource type="Texture2D" uid="uid://cyxqunxkcnktg" path="res://assets/GUI/second_panel.png" id="16_0lyg7"]
 [ext_resource type="StyleBox" uid="uid://doqock7erce6k" path="res://theme/hover_button.tres" id="16_2vuli"]
 [ext_resource type="StyleBox" uid="uid://f87plyuqdqh4" path="res://theme/normal_button.tres" id="17_bpngx"]
-
-[sub_resource type="Resource" id="Resource_lgh8b"]
-script = ExtResource("4_gcm7t")
-description = "+10% Damage Boost"
-max_health = 0.0
-recovery = 0.0
-armor = 0.0
-shield = 0.0
-movement_speed = 0.0
-attack_range = 0.0
-magnet = 0.0
-revival = 0
-growth = 0.0
-dmg_multiplier = 0.1
-
-[sub_resource type="Resource" id="Resource_edt7n"]
-script = ExtResource("3_olqca")
-name = "Damage Boost I"
-icon = ExtResource("2_lmrfa")
-cost = 10
-tier = 1
-stats = SubResource("Resource_lgh8b")
-
-[sub_resource type="Resource" id="Resource_12pbf"]
-script = ExtResource("4_gcm7t")
-description = "+10% Damage Boost"
-max_health = 0.0
-recovery = 0.0
-armor = 0.0
-shield = 0.0
-movement_speed = 0.0
-attack_range = 0.0
-magnet = 0.0
-revival = 0
-growth = 0.0
-dmg_multiplier = 0.1
-
-[sub_resource type="Resource" id="Resource_ndunu"]
-script = ExtResource("3_olqca")
-name = "Damage Boost II"
-icon = ExtResource("2_lmrfa")
-cost = 30
-tier = 2
-stats = SubResource("Resource_12pbf")
-
-[sub_resource type="Resource" id="Resource_vj4p4"]
-script = ExtResource("4_gcm7t")
-description = "+20% Damage Boost"
-max_health = 0.0
-recovery = 0.0
-armor = 0.0
-shield = 0.0
-movement_speed = 0.0
-attack_range = 0.0
-magnet = 0.0
-revival = 0
-growth = 0.0
-dmg_multiplier = 0.2
-
-[sub_resource type="Resource" id="Resource_aume2"]
-script = ExtResource("3_olqca")
-name = "Damage Boost III"
-icon = ExtResource("2_lmrfa")
-cost = 50
-tier = 3
-stats = SubResource("Resource_vj4p4")
 
 [sub_resource type="Resource" id="Resource_3rhks"]
 script = ExtResource("4_gcm7t")
@@ -100,6 +32,8 @@ magnet = 0.0
 revival = 0
 growth = 0.0
 dmg_multiplier = 0.0
+boosted_tier = 0
+boosted_value = 0.0
 
 [sub_resource type="Resource" id="Resource_gw73w"]
 script = ExtResource("3_olqca")
@@ -122,6 +56,8 @@ magnet = 0.0
 revival = 0
 growth = 0.0
 dmg_multiplier = 0.0
+boosted_tier = 0
+boosted_value = 0.0
 
 [sub_resource type="Resource" id="Resource_lrs8i"]
 script = ExtResource("3_olqca")
@@ -144,6 +80,8 @@ magnet = 0.0
 revival = 0
 growth = 0.0
 dmg_multiplier = 0.0
+boosted_tier = 0
+boosted_value = 0.0
 
 [sub_resource type="Resource" id="Resource_pfjlr"]
 script = ExtResource("3_olqca")
@@ -152,72 +90,6 @@ icon = ExtResource("6_i7ivb")
 cost = 50
 tier = 3
 stats = SubResource("Resource_qilkh")
-
-[sub_resource type="Resource" id="Resource_0ypu6"]
-script = ExtResource("4_gcm7t")
-description = "+0.2 Health/sec"
-max_health = 0.0
-recovery = 0.2
-armor = 0.0
-shield = 0.0
-movement_speed = 0.0
-attack_range = 0.0
-magnet = 0.0
-revival = 0
-growth = 0.0
-dmg_multiplier = 0.0
-
-[sub_resource type="Resource" id="Resource_00jfs"]
-script = ExtResource("3_olqca")
-name = "Recovery I"
-icon = ExtResource("7_hu2kv")
-cost = 10
-tier = 1
-stats = SubResource("Resource_0ypu6")
-
-[sub_resource type="Resource" id="Resource_xhq7e"]
-script = ExtResource("4_gcm7t")
-description = "+0.4 Health/sec"
-max_health = 0.0
-recovery = 0.4
-armor = 0.0
-shield = 0.0
-movement_speed = 0.0
-attack_range = 0.0
-magnet = 0.0
-revival = 0
-growth = 0.0
-dmg_multiplier = 0.0
-
-[sub_resource type="Resource" id="Resource_1dwro"]
-script = ExtResource("3_olqca")
-name = "Recovery II"
-icon = ExtResource("7_hu2kv")
-cost = 30
-tier = 2
-stats = SubResource("Resource_xhq7e")
-
-[sub_resource type="Resource" id="Resource_ooh1e"]
-script = ExtResource("4_gcm7t")
-description = "+0.6 Health/sec"
-max_health = 0.0
-recovery = 0.6
-armor = 0.0
-shield = 0.0
-movement_speed = 0.0
-attack_range = 0.0
-magnet = 0.0
-revival = 0
-growth = 0.0
-dmg_multiplier = 0.0
-
-[sub_resource type="Resource" id="Resource_g4mex"]
-script = ExtResource("3_olqca")
-name = "Recovery III"
-icon = ExtResource("7_hu2kv")
-cost = 50
-tier = 3
-stats = SubResource("Resource_ooh1e")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_58yrj"]
 texture = ExtResource("14_07lec")
@@ -303,7 +175,6 @@ grow_vertical = 2
 script = ExtResource("1_uremf")
 
 [node name="skill_tree" type="Panel" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -314,44 +185,6 @@ pivot_offset = Vector2(320, 180)
 theme_override_styles/panel = ExtResource("2_54idq")
 script = ExtResource("1_16axu")
 
-[node name="dmg_boost" type="Control" parent="skill_tree"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="skill_upgrade" parent="skill_tree/dmg_boost" instance=ExtResource("1_i82p2")]
-layout_mode = 0
-offset_left = -148.0
-offset_top = -8.0
-offset_right = -108.0
-offset_bottom = 32.0
-skill = SubResource("Resource_edt7n")
-
-[node name="skill_upgrade2" parent="skill_tree/dmg_boost" instance=ExtResource("1_i82p2")]
-layout_mode = 0
-offset_left = -212.0
-offset_top = -8.0
-offset_right = -172.0
-offset_bottom = 32.0
-skill = SubResource("Resource_ndunu")
-
-[node name="skill_upgrade3" parent="skill_tree/dmg_boost" instance=ExtResource("1_i82p2")]
-layout_mode = 0
-offset_left = -276.0
-offset_top = -8.0
-offset_right = -236.0
-offset_bottom = 32.0
-skill = SubResource("Resource_aume2")
-
 [node name="armor" type="Control" parent="skill_tree"]
 layout_mode = 1
 anchors_preset = 8
@@ -359,38 +192,14 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
+offset_left = -280.0
+offset_top = 124.0
+offset_right = -240.0
+offset_bottom = 164.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="skill_upgrade" parent="skill_tree/armor" instance=ExtResource("1_i82p2")]
-layout_mode = 0
-offset_left = 148.0
-offset_top = -8.0
-offset_right = 188.0
-offset_bottom = 32.0
-skill = SubResource("Resource_gw73w")
-
-[node name="skill_upgrade2" parent="skill_tree/armor" instance=ExtResource("1_i82p2")]
-layout_mode = 0
-offset_left = 212.0
-offset_top = -8.0
-offset_right = 252.0
-offset_bottom = 32.0
-skill = SubResource("Resource_lrs8i")
-
-[node name="skill_upgrade3" parent="skill_tree/armor" instance=ExtResource("1_i82p2")]
-layout_mode = 0
-offset_left = 276.0
-offset_top = -8.0
-offset_right = 316.0
-offset_bottom = 32.0
-skill = SubResource("Resource_pfjlr")
-
-[node name="recovery" type="Control" parent="skill_tree"]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -403,24 +212,692 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
+skill = SubResource("Resource_gw73w")
 
-[node name="skill_upgrade" parent="skill_tree/recovery" instance=ExtResource("1_i82p2")]
-layout_mode = 0
-offset_top = -32.0
-offset_bottom = 8.0
-skill = SubResource("Resource_00jfs")
+[node name="skill_upgrade2" parent="skill_tree/armor" instance=ExtResource("1_i82p2")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -68.0
+offset_right = 20.0
+offset_bottom = -28.0
+grow_horizontal = 2
+grow_vertical = 2
+skill = SubResource("Resource_lrs8i")
 
-[node name="skill_upgrade2" parent="skill_tree/recovery" instance=ExtResource("1_i82p2")]
-layout_mode = 0
-offset_top = -88.0
-offset_bottom = -48.0
-skill = SubResource("Resource_1dwro")
+[node name="skill_upgrade3" parent="skill_tree/armor" instance=ExtResource("1_i82p2")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -116.0
+offset_right = 20.0
+offset_bottom = -76.0
+grow_horizontal = 2
+grow_vertical = 2
+skill = SubResource("Resource_pfjlr")
 
-[node name="skill_upgrade3" parent="skill_tree/recovery" instance=ExtResource("1_i82p2")]
-layout_mode = 0
-offset_top = -144.0
-offset_bottom = -104.0
-skill = SubResource("Resource_g4mex")
+[node name="skill_upgrade4" parent="skill_tree/armor" instance=ExtResource("1_i82p2")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -163.0
+offset_right = 20.0
+offset_bottom = -123.0
+grow_horizontal = 2
+grow_vertical = 2
+skill = SubResource("Resource_pfjlr")
+
+[node name="skill_upgrade5" parent="skill_tree/armor" instance=ExtResource("1_i82p2")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -212.0
+offset_right = 20.0
+offset_bottom = -172.0
+grow_horizontal = 2
+grow_vertical = 2
+skill = SubResource("Resource_pfjlr")
+
+[node name="skill_upgrade6" parent="skill_tree/armor" instance=ExtResource("1_i82p2")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 4.0
+offset_top = -260.0
+offset_right = 44.0
+offset_bottom = -220.0
+grow_horizontal = 2
+grow_vertical = 2
+skill = SubResource("Resource_pfjlr")
+
+[node name="skill_upgrade7" parent="skill_tree/armor" instance=ExtResource("1_i82p2")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -260.0
+offset_right = -4.0
+offset_bottom = -220.0
+grow_horizontal = 2
+grow_vertical = 2
+skill = SubResource("Resource_pfjlr")
+
+[node name="armor2" type="Control" parent="skill_tree"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -176.0
+offset_top = 124.0
+offset_right = -136.0
+offset_bottom = 164.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="skill_upgrade" parent="skill_tree/armor2" instance=ExtResource("1_i82p2")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+skill = SubResource("Resource_gw73w")
+
+[node name="skill_upgrade2" parent="skill_tree/armor2" instance=ExtResource("1_i82p2")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -68.0
+offset_right = 20.0
+offset_bottom = -28.0
+grow_horizontal = 2
+grow_vertical = 2
+skill = SubResource("Resource_lrs8i")
+
+[node name="skill_upgrade3" parent="skill_tree/armor2" instance=ExtResource("1_i82p2")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -116.0
+offset_right = 20.0
+offset_bottom = -76.0
+grow_horizontal = 2
+grow_vertical = 2
+skill = SubResource("Resource_pfjlr")
+
+[node name="skill_upgrade4" parent="skill_tree/armor2" instance=ExtResource("1_i82p2")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -163.0
+offset_right = 20.0
+offset_bottom = -123.0
+grow_horizontal = 2
+grow_vertical = 2
+skill = SubResource("Resource_pfjlr")
+
+[node name="skill_upgrade5" parent="skill_tree/armor2" instance=ExtResource("1_i82p2")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -212.0
+offset_right = 20.0
+offset_bottom = -172.0
+grow_horizontal = 2
+grow_vertical = 2
+skill = SubResource("Resource_pfjlr")
+
+[node name="skill_upgrade6" parent="skill_tree/armor2" instance=ExtResource("1_i82p2")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 4.0
+offset_top = -260.0
+offset_right = 44.0
+offset_bottom = -220.0
+grow_horizontal = 2
+grow_vertical = 2
+skill = SubResource("Resource_pfjlr")
+
+[node name="skill_upgrade7" parent="skill_tree/armor2" instance=ExtResource("1_i82p2")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -260.0
+offset_right = -4.0
+offset_bottom = -220.0
+grow_horizontal = 2
+grow_vertical = 2
+skill = SubResource("Resource_pfjlr")
+
+[node name="armor3" type="Control" parent="skill_tree"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -72.0
+offset_top = 124.0
+offset_right = -32.0
+offset_bottom = 164.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="skill_upgrade" parent="skill_tree/armor3" instance=ExtResource("1_i82p2")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+skill = SubResource("Resource_gw73w")
+
+[node name="skill_upgrade2" parent="skill_tree/armor3" instance=ExtResource("1_i82p2")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -68.0
+offset_right = 20.0
+offset_bottom = -28.0
+grow_horizontal = 2
+grow_vertical = 2
+skill = SubResource("Resource_lrs8i")
+
+[node name="skill_upgrade3" parent="skill_tree/armor3" instance=ExtResource("1_i82p2")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -116.0
+offset_right = 20.0
+offset_bottom = -76.0
+grow_horizontal = 2
+grow_vertical = 2
+skill = SubResource("Resource_pfjlr")
+
+[node name="skill_upgrade4" parent="skill_tree/armor3" instance=ExtResource("1_i82p2")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -163.0
+offset_right = 20.0
+offset_bottom = -123.0
+grow_horizontal = 2
+grow_vertical = 2
+skill = SubResource("Resource_pfjlr")
+
+[node name="skill_upgrade5" parent="skill_tree/armor3" instance=ExtResource("1_i82p2")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -212.0
+offset_right = 20.0
+offset_bottom = -172.0
+grow_horizontal = 2
+grow_vertical = 2
+skill = SubResource("Resource_pfjlr")
+
+[node name="skill_upgrade6" parent="skill_tree/armor3" instance=ExtResource("1_i82p2")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 4.0
+offset_top = -260.0
+offset_right = 44.0
+offset_bottom = -220.0
+grow_horizontal = 2
+grow_vertical = 2
+skill = SubResource("Resource_pfjlr")
+
+[node name="skill_upgrade7" parent="skill_tree/armor3" instance=ExtResource("1_i82p2")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -260.0
+offset_right = -4.0
+offset_bottom = -220.0
+grow_horizontal = 2
+grow_vertical = 2
+skill = SubResource("Resource_pfjlr")
+
+[node name="armor4" type="Control" parent="skill_tree"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 32.0
+offset_top = 124.0
+offset_right = 72.0
+offset_bottom = 164.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="skill_upgrade" parent="skill_tree/armor4" instance=ExtResource("1_i82p2")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+skill = SubResource("Resource_gw73w")
+
+[node name="skill_upgrade2" parent="skill_tree/armor4" instance=ExtResource("1_i82p2")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -68.0
+offset_right = 20.0
+offset_bottom = -28.0
+grow_horizontal = 2
+grow_vertical = 2
+skill = SubResource("Resource_lrs8i")
+
+[node name="skill_upgrade3" parent="skill_tree/armor4" instance=ExtResource("1_i82p2")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -116.0
+offset_right = 20.0
+offset_bottom = -76.0
+grow_horizontal = 2
+grow_vertical = 2
+skill = SubResource("Resource_pfjlr")
+
+[node name="skill_upgrade4" parent="skill_tree/armor4" instance=ExtResource("1_i82p2")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -163.0
+offset_right = 20.0
+offset_bottom = -123.0
+grow_horizontal = 2
+grow_vertical = 2
+skill = SubResource("Resource_pfjlr")
+
+[node name="skill_upgrade5" parent="skill_tree/armor4" instance=ExtResource("1_i82p2")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -212.0
+offset_right = 20.0
+offset_bottom = -172.0
+grow_horizontal = 2
+grow_vertical = 2
+skill = SubResource("Resource_pfjlr")
+
+[node name="skill_upgrade6" parent="skill_tree/armor4" instance=ExtResource("1_i82p2")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 4.0
+offset_top = -260.0
+offset_right = 44.0
+offset_bottom = -220.0
+grow_horizontal = 2
+grow_vertical = 2
+skill = SubResource("Resource_pfjlr")
+
+[node name="skill_upgrade7" parent="skill_tree/armor4" instance=ExtResource("1_i82p2")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -260.0
+offset_right = -4.0
+offset_bottom = -220.0
+grow_horizontal = 2
+grow_vertical = 2
+skill = SubResource("Resource_pfjlr")
+
+[node name="armor5" type="Control" parent="skill_tree"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 136.0
+offset_top = 124.0
+offset_right = 176.0
+offset_bottom = 164.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="skill_upgrade" parent="skill_tree/armor5" instance=ExtResource("1_i82p2")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+skill = SubResource("Resource_gw73w")
+
+[node name="skill_upgrade2" parent="skill_tree/armor5" instance=ExtResource("1_i82p2")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -68.0
+offset_right = 20.0
+offset_bottom = -28.0
+grow_horizontal = 2
+grow_vertical = 2
+skill = SubResource("Resource_lrs8i")
+
+[node name="skill_upgrade3" parent="skill_tree/armor5" instance=ExtResource("1_i82p2")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -116.0
+offset_right = 20.0
+offset_bottom = -76.0
+grow_horizontal = 2
+grow_vertical = 2
+skill = SubResource("Resource_pfjlr")
+
+[node name="skill_upgrade4" parent="skill_tree/armor5" instance=ExtResource("1_i82p2")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -163.0
+offset_right = 20.0
+offset_bottom = -123.0
+grow_horizontal = 2
+grow_vertical = 2
+skill = SubResource("Resource_pfjlr")
+
+[node name="skill_upgrade5" parent="skill_tree/armor5" instance=ExtResource("1_i82p2")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -212.0
+offset_right = 20.0
+offset_bottom = -172.0
+grow_horizontal = 2
+grow_vertical = 2
+skill = SubResource("Resource_pfjlr")
+
+[node name="skill_upgrade6" parent="skill_tree/armor5" instance=ExtResource("1_i82p2")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 4.0
+offset_top = -260.0
+offset_right = 44.0
+offset_bottom = -220.0
+grow_horizontal = 2
+grow_vertical = 2
+skill = SubResource("Resource_pfjlr")
+
+[node name="skill_upgrade7" parent="skill_tree/armor5" instance=ExtResource("1_i82p2")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -260.0
+offset_right = -4.0
+offset_bottom = -220.0
+grow_horizontal = 2
+grow_vertical = 2
+skill = SubResource("Resource_pfjlr")
+
+[node name="armor6" type="Control" parent="skill_tree"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 240.0
+offset_top = 124.0
+offset_right = 280.0
+offset_bottom = 164.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="skill_upgrade" parent="skill_tree/armor6" instance=ExtResource("1_i82p2")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+skill = SubResource("Resource_gw73w")
+
+[node name="skill_upgrade2" parent="skill_tree/armor6" instance=ExtResource("1_i82p2")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -68.0
+offset_right = 20.0
+offset_bottom = -28.0
+grow_horizontal = 2
+grow_vertical = 2
+skill = SubResource("Resource_lrs8i")
+
+[node name="skill_upgrade3" parent="skill_tree/armor6" instance=ExtResource("1_i82p2")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -116.0
+offset_right = 20.0
+offset_bottom = -76.0
+grow_horizontal = 2
+grow_vertical = 2
+skill = SubResource("Resource_pfjlr")
+
+[node name="skill_upgrade4" parent="skill_tree/armor6" instance=ExtResource("1_i82p2")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -163.0
+offset_right = 20.0
+offset_bottom = -123.0
+grow_horizontal = 2
+grow_vertical = 2
+skill = SubResource("Resource_pfjlr")
+
+[node name="skill_upgrade5" parent="skill_tree/armor6" instance=ExtResource("1_i82p2")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -212.0
+offset_right = 20.0
+offset_bottom = -172.0
+grow_horizontal = 2
+grow_vertical = 2
+skill = SubResource("Resource_pfjlr")
+
+[node name="skill_upgrade6" parent="skill_tree/armor6" instance=ExtResource("1_i82p2")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 4.0
+offset_top = -260.0
+offset_right = 44.0
+offset_bottom = -220.0
+grow_horizontal = 2
+grow_vertical = 2
+skill = SubResource("Resource_pfjlr")
+
+[node name="skill_upgrade7" parent="skill_tree/armor6" instance=ExtResource("1_i82p2")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -44.0
+offset_top = -260.0
+offset_right = -4.0
+offset_bottom = -220.0
+grow_horizontal = 2
+grow_vertical = 2
+skill = SubResource("Resource_pfjlr")
 
 [node name="gold" type="Label" parent="skill_tree"]
 layout_mode = 0
@@ -523,7 +1000,6 @@ theme_override_font_sizes/font_size = 16
 text = "Quit"
 
 [node name="beastiary" type="Panel" parent="."]
-visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -622,6 +1098,7 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Health:"
 
 [node name="equipment" type="Panel" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -649,7 +1126,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme = SubResource("Theme_mdp16")
 theme_override_constants/separation = 10
-script = ExtResource("15_1tydw")
 
 [node name="info" type="Panel" parent="equipment"]
 custom_minimum_size = Vector2(250, 250)

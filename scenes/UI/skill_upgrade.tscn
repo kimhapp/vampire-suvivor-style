@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://r3ca0h4n62js"]
 
-[ext_resource type="Script" path="res://scripts/UI/skill_upgrade_button.gd" id="1_g5rbu"]
+[ext_resource type="Script" uid="uid://buqpi73ndpon3" path="res://scripts/UI/skill_upgrade_button.gd" id="1_g5rbu"]
 [ext_resource type="PackedScene" uid="uid://d3fn5a2x1fxk4" path="res://scenes/UI/line_2d.tscn" id="2_w4eok"]
 
 [node name="skill_upgrade" type="TextureButton"]

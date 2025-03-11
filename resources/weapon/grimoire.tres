@@ -2,12 +2,12 @@
 
 [ext_resource type="Resource" uid="uid://bxmtmnembtvu5" path="res://resources/weapon/holy_grimoire.tres" id="1_15riw"]
 [ext_resource type="PackedScene" uid="uid://djmv1eusnkhtn" path="res://scenes/item/weapon/projectile.tscn" id="1_mocbs"]
-[ext_resource type="Script" path="res://scripts/item/weapon/circular_weapon.gd" id="2_dil1y"]
+[ext_resource type="Script" uid="uid://b63e8eeudhxic" path="res://scripts/item/weapon/circular_weapon.gd" id="2_dil1y"]
 [ext_resource type="Texture2D" uid="uid://jpe4x303iaxn" path="res://assets/weapons/Icon-King_Bible.png" id="3_dq00k"]
 [ext_resource type="Resource" uid="uid://b4j4lkmt0b03t" path="res://resources/item/passive_item/candelabrador.tres" id="3_uxv3g"]
 [ext_resource type="Texture2D" uid="uid://t3smivtwdgxq" path="res://assets/weapons/projectile/grimoire_proj.png" id="4_1nmkm"]
-[ext_resource type="Script" path="res://scripts/item/upgrade.gd" id="4_ss7px"]
-[ext_resource type="Script" path="res://scripts/item/weapon/circular_upgrade.gd" id="8_lngl6"]
+[ext_resource type="Script" uid="uid://gbg033tq3ghi" path="res://scripts/item/upgrade.gd" id="4_ss7px"]
+[ext_resource type="Script" uid="uid://ddmuxaxh2up0t" path="res://scripts/item/weapon/circular_upgrade.gd" id="8_lngl6"]
 
 [sub_resource type="Resource" id="Resource_o8le6"]
 script = ExtResource("8_lngl6")

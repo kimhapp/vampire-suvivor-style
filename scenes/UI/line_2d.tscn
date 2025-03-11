@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://d3fn5a2x1fxk4"]
 
-[ext_resource type="Shader" path="res://shaders/line_2D.gdshader" id="1_mcfin"]
+[ext_resource type="Shader" uid="uid://o4rfenqs48el" path="res://shaders/line_2D.gdshader" id="1_mcfin"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_omv68"]
 shader = ExtResource("1_mcfin")
-shader_parameter/bg_color = null
+shader_parameter/bg_color = Color(0, 0, 0, 1)
 shader_parameter/uv_scale = 1.0
 shader_parameter/percentage = 1.0
 shader_parameter/speed = 1.0

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://drgmmkq87osh5"]
 
-[ext_resource type="Script" path="res://scripts/npc/enemy/damage_popup.gd" id="1_m1rtu"]
+[ext_resource type="Script" uid="uid://dpmqymsomwa5i" path="res://scripts/npc/enemy/damage_popup.gd" id="1_m1rtu"]
 
 [node name="damage_popup" type="Label"]
 offset_left = -50.0

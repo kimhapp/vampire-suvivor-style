@@ -1,13 +1,13 @@
 [gd_resource type="Resource" script_class="SingleShot" load_steps=15 format=3 uid="uid://bn3no2uw22xcf"]
 
 [ext_resource type="Resource" uid="uid://cq6ma8qwyc5fx" path="res://resources/weapon/holy_wand.tres" id="1_chi04"]
-[ext_resource type="Script" path="res://scripts/item/weapon/single_shot.gd" id="2_d0sve"]
+[ext_resource type="Script" uid="uid://gxy4ytxl2q61" path="res://scripts/item/weapon/single_shot.gd" id="2_d0sve"]
 [ext_resource type="Resource" uid="uid://c85hjmwa8g67b" path="res://resources/item/passive_item/attract_orb.tres" id="2_lkq1c"]
 [ext_resource type="PackedScene" uid="uid://djmv1eusnkhtn" path="res://scenes/item/weapon/projectile.tscn" id="3_ibama"]
 [ext_resource type="Texture2D" uid="uid://ttpt17osnh3v" path="res://assets/weapons/Sprite-Magic_Wand.png" id="3_oar4l"]
-[ext_resource type="Script" path="res://scripts/item/upgrade.gd" id="4_k7xx3"]
+[ext_resource type="Script" uid="uid://gbg033tq3ghi" path="res://scripts/item/upgrade.gd" id="4_k7xx3"]
 [ext_resource type="AudioStream" uid="uid://didtylh5aeps8" path="res://assets/sfx/weapon/retro-laser-1-236669.mp3" id="5_78yne"]
-[ext_resource type="Script" path="res://scripts/item/weapon/projectile_upgrade.gd" id="5_k4y55"]
+[ext_resource type="Script" uid="uid://c3dh3e000jxl0" path="res://scripts/item/weapon/projectile_upgrade.gd" id="5_k4y55"]
 [ext_resource type="Texture2D" uid="uid://bs3a6y3r84mbp" path="res://assets/weapons/projectile/magic_wand_proj-export.png" id="7_tiee7"]
 
 [sub_resource type="Resource" id="Resource_irfqm"]

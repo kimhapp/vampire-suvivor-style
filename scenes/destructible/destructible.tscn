@@ -1,8 +1,8 @@
 [gd_scene load_steps=8 format=3 uid="uid://b5557jep1i6sx"]
 
 [ext_resource type="Texture2D" uid="uid://dynh22hc1860u" path="res://assets/destructibles/Torch Animated.png" id="1_i26o8"]
-[ext_resource type="Script" path="res://scripts/destructible/destructible.gd" id="2_pepwu"]
-[ext_resource type="Script" path="res://scripts/item/pickup/pickup_resource.gd" id="3_y68a2"]
+[ext_resource type="Script" uid="uid://bobtkhp1mrce4" path="res://scripts/destructible/destructible.gd" id="2_pepwu"]
+[ext_resource type="Script" uid="uid://bjwftyivjjlja" path="res://scripts/item/pickup/pickup_resource.gd" id="3_y68a2"]
 [ext_resource type="Resource" uid="uid://mara38kbjkl3" path="res://resources/pickup/gold_bag.tres" id="4_ffqbh"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_73d1w"]

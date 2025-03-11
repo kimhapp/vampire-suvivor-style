@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Chest" load_steps=4 format=3 uid="uid://ushwnvr0syf7"]
 
 [ext_resource type="Texture2D" uid="uid://njb64ufcir86" path="res://assets/chest/chest_icon.png" id="1_p36lo"]
-[ext_resource type="Script" path="res://scripts/item/pickup/chest_resource.gd" id="2_wd5vy"]
+[ext_resource type="Script" uid="uid://mpo0nfympyrq" path="res://scripts/item/pickup/chest_resource.gd" id="2_wd5vy"]
 [ext_resource type="AudioStream" uid="uid://ckfw5gceja4c2" path="res://assets/sfx/pickup/retro-coin-4-236671.mp3" id="3_iv0ec"]
 
 [resource]

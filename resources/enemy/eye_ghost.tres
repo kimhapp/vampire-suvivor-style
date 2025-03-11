@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="Enemy" load_steps=5 format=3 uid="uid://b01b06i2k7v8e"]
 
-[ext_resource type="Script" path="res://scripts/npc/enemy/enemy_type.gd" id="1_8b4a3"]
-[ext_resource type="Script" path="res://scripts/item/pickup/pickup_resource.gd" id="1_wbrrf"]
+[ext_resource type="Script" uid="uid://1oe6c6axknma" path="res://scripts/npc/enemy/enemy_type.gd" id="1_8b4a3"]
+[ext_resource type="Script" uid="uid://bjwftyivjjlja" path="res://scripts/item/pickup/pickup_resource.gd" id="1_wbrrf"]
 [ext_resource type="Resource" uid="uid://cyoso6tt0qeeh" path="res://resources/pickup/blue_gem.tres" id="2_5yqhv"]
 [ext_resource type="Texture2D" uid="uid://cd57epwm1mu3r" path="res://assets/RPG Battlers 3/5 v1.png" id="2_v1o2q"]
 
