@@ -1,7 +1,7 @@
 extends Resource
 class_name Skill
 
-enum SKILL_TIER  {Basic, Rare, Epic, Legendary}
+enum SKILL_TIER  {Rare, Epic, Legendary}
 
 @export var name : String
 @export var icon : Texture2D

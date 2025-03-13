@@ -4,8 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://d3fn5a2x1fxk4" path="res://scenes/UI/line_2d.tscn" id="2_w4eok"]
 
 [node name="skill_upgrade" type="TextureButton"]
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 16.0
+offset_bottom = 16.0
 toggle_mode = true
 ignore_texture_size = true
 stretch_mode = 5
@@ -13,8 +13,8 @@ script = ExtResource("1_g5rbu")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 16.0
+offset_bottom = 16.0
 mouse_filter = 1
 
 [node name="connection" parent="." instance=ExtResource("2_w4eok")]

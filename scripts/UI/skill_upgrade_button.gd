@@ -35,9 +35,7 @@ func is_upgradable() -> bool:
 
 func _on_pressed() -> void:
 	if skill.cost <= SaveData.gold and is_upgradable() and not enabled:
-		if skill.tier == skill.SKILL_TIER.Basic:
-			pass
-		elif skill.tier == skill.SKILL_TIER.Rare:
+		if skill.tier == skill.SKILL_TIER.Rare:
 			audio_path = "res://assets/sfx/ui/upgrade_basic_tier.mp3"
 		elif skill.tier == skill.SKILL_TIER.Epic:
 			audio_path = "res://assets/sfx/ui/upgrade_mid_tier.mp3"
