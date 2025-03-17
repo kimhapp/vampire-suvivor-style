@@ -53,14 +53,14 @@ func initial_modifier() -> Vector2:
 	var modification : Vector2 = Vector2.ZERO
 	
 	if difference.x < 0:
-		modification += Vector2(-20, 0)
+		modification += Vector2(-10, 0)
 	elif difference.x > 0:
-		modification += Vector2(20, 0)
+		modification += Vector2(10, 0)
 	
 	if difference.y < 0:
-		modification += Vector2(0, -20)
+		modification += Vector2(0, -10)
 	elif difference.y > 0:
-		modification += Vector2(0, 20)
+		modification += Vector2(0, 10)
 	
 	return modification
 

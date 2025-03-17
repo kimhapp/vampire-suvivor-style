@@ -37,6 +37,7 @@ var growth : float = 1.0
 var luck : float = 0.5
 var current_boosted_tier : BOOSTED_TIER
 var current_boosted_value : float = 0.0
+var knockback : float = 50
 
 var gold : int = 0:
 	set(value):

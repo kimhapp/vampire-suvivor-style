@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://cd15aad1bpd8w"]
+[gd_scene load_steps=71 format=3 uid="uid://cd15aad1bpd8w"]
 
 [ext_resource type="Script" uid="uid://dmqtbcnsaqsm4" path="res://scripts/UI/skill_tree.gd" id="1_16axu"]
 [ext_resource type="PackedScene" uid="uid://r3ca0h4n62js" path="res://scenes/UI/skill_upgrade.tscn" id="1_i82p2"]
@@ -35,8 +35,10 @@ attack_range = 20.0
 critical_chance = 0.0
 critical_damage = 0.0
 dmg_multiplier = 0.0
-cast_speed = 0.0
+attack_speed = 0.0
 projectile_speed = 0.0
+knockback = 0.0
+knockback_level = 0
 movement_speed = 0.0
 magnet = 0.0
 growth = 0.0
@@ -66,8 +68,10 @@ attack_range = 0.0
 critical_chance = 0.0
 critical_damage = 0.2
 dmg_multiplier = 0.0
-cast_speed = 0.0
+attack_speed = 0.0
 projectile_speed = 0.0
+knockback = 0.0
+knockback_level = 0
 movement_speed = 0.0
 magnet = 0.0
 growth = 0.0
@@ -98,8 +102,10 @@ attack_range = 0.0
 critical_chance = 0.1
 critical_damage = 0.0
 dmg_multiplier = 0.0
-cast_speed = 0.0
+attack_speed = 0.0
 projectile_speed = 0.0
+knockback = 0.0
+knockback_level = 0
 movement_speed = 0.0
 magnet = 0.0
 growth = 0.0
@@ -129,8 +135,10 @@ attack_range = 0.0
 critical_chance = 0.0
 critical_damage = 0.0
 dmg_multiplier = 0.1
-cast_speed = 0.0
+attack_speed = 0.0
 projectile_speed = 0.0
+knockback = 0.0
+knockback_level = 0
 movement_speed = 0.0
 magnet = 0.0
 growth = 0.0
@@ -150,7 +158,7 @@ metadata/_custom_type_script = "uid://l7422fa60n04"
 
 [sub_resource type="Resource" id="Resource_6gm0r"]
 script = ExtResource("4_gcm7t")
-description = "+35% Cast Speed"
+description = "+25% Attack Speed"
 max_health = 0.0
 recovery = 0.0
 armor = 0.0
@@ -160,8 +168,10 @@ attack_range = 0.0
 critical_chance = 0.0
 critical_damage = 0.0
 dmg_multiplier = 0.0
-cast_speed = 0.35
+attack_speed = 0.0
 projectile_speed = 0.0
+knockback = 0.0
+knockback_level = 0
 movement_speed = 0.0
 magnet = 0.0
 growth = 0.0
@@ -172,16 +182,17 @@ metadata/_custom_type_script = "uid://b5j25o66xgae7"
 
 [sub_resource type="Resource" id="Resource_cj7n5"]
 script = ExtResource("3_olqca")
-name = "Empty Tome I - Cast"
+name = "Empty Tome I - Attack Speed"
 icon = ExtResource("11_nu0op")
-cost = 150
-tier = 2
+cost = 125
+tier = 1
 stats = SubResource("Resource_6gm0r")
 metadata/_custom_type_script = "uid://l7422fa60n04"
 
 [sub_resource type="Resource" id="Resource_nu0op"]
 script = ExtResource("4_gcm7t")
-description = "+50% Projectile Speed"
+description = "+35% Projectile Speed
++75 Projectile Knockback"
 max_health = 0.0
 recovery = 0.0
 armor = 0.0
@@ -191,8 +202,10 @@ attack_range = 0.0
 critical_chance = 0.0
 critical_damage = 0.0
 dmg_multiplier = 0.0
-cast_speed = 0.0
+attack_speed = 0.0
 projectile_speed = 0.5
+knockback = 0.0
+knockback_level = 0
 movement_speed = 0.0
 magnet = 0.0
 growth = 0.0
@@ -205,8 +218,8 @@ metadata/_custom_type_script = "uid://b5j25o66xgae7"
 script = ExtResource("3_olqca")
 name = "Empty Tome I - Projectile"
 icon = ExtResource("11_nu0op")
-cost = 150
-tier = 2
+cost = 125
+tier = 1
 stats = SubResource("Resource_nu0op")
 metadata/_custom_type_script = "uid://l7422fa60n04"
 
@@ -222,8 +235,10 @@ attack_range = 0.0
 critical_chance = 0.0
 critical_damage = 0.0
 dmg_multiplier = 0.0
-cast_speed = 0.0
+attack_speed = 0.0
 projectile_speed = 0.0
+knockback = 0.0
+knockback_level = 0
 movement_speed = 0.0
 magnet = 0.0
 growth = 0.0
@@ -253,8 +268,10 @@ attack_range = 0.0
 critical_chance = 0.2
 critical_damage = 0.0
 dmg_multiplier = 0.0
-cast_speed = 0.0
+attack_speed = 0.0
 projectile_speed = 0.0
+knockback = 0.0
+knockback_level = 0
 movement_speed = 0.0
 magnet = 0.0
 growth = 0.0
@@ -284,8 +301,10 @@ attack_range = 0.0
 critical_chance = 0.0
 critical_damage = 0.4
 dmg_multiplier = 0.0
-cast_speed = 0.0
+attack_speed = 0.0
 projectile_speed = 0.0
+knockback = 0.0
+knockback_level = 0
 movement_speed = 0.0
 magnet = 0.0
 growth = 0.0
@@ -316,8 +335,10 @@ attack_range = 0.0
 critical_chance = 0.15
 critical_damage = 0.3
 dmg_multiplier = 0.0
-cast_speed = 0.0
+attack_speed = 0.0
 projectile_speed = 0.0
+knockback = 0.0
+knockback_level = 0
 movement_speed = 0.0
 magnet = 0.0
 growth = 0.0
@@ -330,7 +351,7 @@ metadata/_custom_type_script = "uid://b5j25o66xgae7"
 script = ExtResource("3_olqca")
 name = "Empty Tome II - Critical"
 icon = ExtResource("11_nu0op")
-cost = 150
+cost = 175
 tier = 2
 stats = SubResource("Resource_f07th")
 metadata/_custom_type_script = "uid://l7422fa60n04"
@@ -340,7 +361,7 @@ load_path = "res://.godot/imported/Sprite-Empty_Tome.png-4d041300c097786a5a471a3
 
 [sub_resource type="Resource" id="Resource_qvwvq"]
 script = ExtResource("4_gcm7t")
-description = "+35% Cast Speed"
+description = "+45% Attack Speed"
 max_health = 0.0
 recovery = 0.0
 armor = 0.0
@@ -350,8 +371,10 @@ attack_range = 0.0
 critical_chance = 0.0
 critical_damage = 0.0
 dmg_multiplier = 0.0
-cast_speed = 0.35
+attack_speed = 0.0
 projectile_speed = 0.0
+knockback = 0.0
+knockback_level = 0
 movement_speed = 0.0
 magnet = 0.0
 growth = 0.0
@@ -362,16 +385,17 @@ metadata/_custom_type_script = "uid://b5j25o66xgae7"
 
 [sub_resource type="Resource" id="Resource_62nw6"]
 script = ExtResource("3_olqca")
-name = "Empty Tome II - Cast"
+name = "Empty Tome II - Attack Speed"
 icon = SubResource("CompressedTexture2D_u15bo")
-cost = 150
+cost = 175
 tier = 2
 stats = SubResource("Resource_qvwvq")
 metadata/_custom_type_script = "uid://l7422fa60n04"
 
 [sub_resource type="Resource" id="Resource_himyh"]
 script = ExtResource("4_gcm7t")
-description = "+50% Projectile Speed"
+description = "+50% Projectile Speed
++100 Projectile Knockback"
 max_health = 0.0
 recovery = 0.0
 armor = 0.0
@@ -381,8 +405,10 @@ attack_range = 0.0
 critical_chance = 0.15
 critical_damage = 0.3
 dmg_multiplier = 0.0
-cast_speed = 0.0
+attack_speed = 0.0
 projectile_speed = 0.5
+knockback = 0.0
+knockback_level = 0
 movement_speed = 0.0
 magnet = 0.0
 growth = 0.0
@@ -395,9 +421,295 @@ metadata/_custom_type_script = "uid://b5j25o66xgae7"
 script = ExtResource("3_olqca")
 name = "Empty Tome II - Projectile"
 icon = ExtResource("11_nu0op")
-cost = 150
+cost = 175
 tier = 2
 stats = SubResource("Resource_himyh")
+metadata/_custom_type_script = "uid://l7422fa60n04"
+
+[sub_resource type="Resource" id="Resource_u15bo"]
+script = ExtResource("4_gcm7t")
+description = "+100 Attack Range"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+shield = 0.0
+damage_reduction = 0.0
+attack_range = 100.0
+critical_chance = 0.0
+critical_damage = 0.0
+dmg_multiplier = 0.0
+attack_speed = 0.0
+projectile_speed = 0.0
+knockback = 0.0
+knockback_level = 0
+movement_speed = 0.0
+magnet = 0.0
+growth = 0.0
+luck = 0.0
+boosted_tier = 0
+boosted_value = 0.0
+metadata/_custom_type_script = "uid://b5j25o66xgae7"
+
+[sub_resource type="Resource" id="Resource_twont"]
+script = ExtResource("3_olqca")
+name = "Candelabrador III"
+icon = ExtResource("5_dqbul")
+cost = 150
+tier = 2
+stats = SubResource("Resource_u15bo")
+metadata/_custom_type_script = "uid://l7422fa60n04"
+
+[sub_resource type="Resource" id="Resource_gp1ih"]
+script = ExtResource("4_gcm7t")
+description = "+15% Damage Boost"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+shield = 0.0
+damage_reduction = 0.0
+attack_range = 0.0
+critical_chance = 0.0
+critical_damage = 0.0
+dmg_multiplier = 0.15
+attack_speed = 0.0
+projectile_speed = 0.0
+knockback = 0.0
+knockback_level = 0
+movement_speed = 0.0
+magnet = 0.0
+growth = 0.0
+luck = 0.0
+boosted_tier = 0
+boosted_value = 0.0
+metadata/_custom_type_script = "uid://b5j25o66xgae7"
+
+[sub_resource type="Resource" id="Resource_0vyrp"]
+script = ExtResource("3_olqca")
+name = "Spinach II"
+icon = ExtResource("10_cj7n5")
+cost = 150
+tier = 2
+stats = SubResource("Resource_gp1ih")
+metadata/_custom_type_script = "uid://l7422fa60n04"
+
+[sub_resource type="Resource" id="Resource_pm66n"]
+script = ExtResource("4_gcm7t")
+description = "+5% Critical Chance
++10% Critical  Damage
+
+Passive: Each critical hit will increase attack speed by 5% up to 50% for 20s. (Skill not implemented yet)"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+shield = 0.0
+damage_reduction = 0.0
+attack_range = 0.0
+critical_chance = 0.05
+critical_damage = 0.1
+dmg_multiplier = 0.0
+attack_speed = 0.0
+projectile_speed = 0.0
+knockback = 0.0
+knockback_level = 0
+movement_speed = 0.0
+magnet = 0.0
+growth = 0.0
+luck = 0.0
+boosted_tier = 0
+boosted_value = 0.0
+metadata/_custom_type_script = "uid://b5j25o66xgae7"
+
+[sub_resource type="Resource" id="Resource_wt33a"]
+script = ExtResource("3_olqca")
+name = "Empty Tome III - Aggression"
+icon = ExtResource("11_nu0op")
+cost = 200
+tier = 2
+stats = SubResource("Resource_pm66n")
+metadata/_custom_type_script = "uid://l7422fa60n04"
+
+[sub_resource type="Resource" id="Resource_cfh5a"]
+script = ExtResource("4_gcm7t")
+description = "+15% Projectile Speed
++25 Knockback
++15% Attack Speed
++1 Knockback Level
+
+Passive: Each hit can no longer be critical, but will apply a (5 + level) damage every (1 / attack speed)s for 5s. (Skill not implemented yet)"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+shield = 0.0
+damage_reduction = 0.0
+attack_range = 0.0
+critical_chance = 0.0
+critical_damage = 0.0
+dmg_multiplier = 0.0
+attack_speed = 0.15
+projectile_speed = 0.15
+knockback = 25.0
+knockback_level = 1
+movement_speed = 0.0
+magnet = 0.0
+growth = 0.0
+luck = 0.0
+boosted_tier = 0
+boosted_value = 0.0
+metadata/_custom_type_script = "uid://b5j25o66xgae7"
+
+[sub_resource type="Resource" id="Resource_6irp5"]
+script = ExtResource("3_olqca")
+name = "Empty Tome III - Poison"
+icon = ExtResource("11_nu0op")
+cost = 200
+tier = 2
+stats = SubResource("Resource_cfh5a")
+metadata/_custom_type_script = "uid://l7422fa60n04"
+
+[sub_resource type="Resource" id="Resource_m8t5g"]
+script = ExtResource("4_gcm7t")
+description = "+20% Damage Boost"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+shield = 0.0
+damage_reduction = 0.0
+attack_range = 0.0
+critical_chance = 0.0
+critical_damage = 0.0
+dmg_multiplier = 0.2
+attack_speed = 0.0
+projectile_speed = 0.0
+knockback = 0.0
+knockback_level = 0
+movement_speed = 0.0
+magnet = 0.0
+growth = 0.0
+luck = 0.0
+boosted_tier = 0
+boosted_value = 0.0
+metadata/_custom_type_script = "uid://b5j25o66xgae7"
+
+[sub_resource type="Resource" id="Resource_ffklo"]
+script = ExtResource("3_olqca")
+name = "Spinach III"
+icon = ExtResource("10_cj7n5")
+cost = 250
+tier = 2
+stats = SubResource("Resource_m8t5g")
+metadata/_custom_type_script = "uid://l7422fa60n04"
+
+[sub_resource type="Resource" id="Resource_e6xqc"]
+script = ExtResource("4_gcm7t")
+description = "+5% Damage Boost
+
+Passive: Gain 50% Damage Boost for 5s after switching to a different weapon. (Skill not implemented yet)"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+shield = 0.0
+damage_reduction = 0.0
+attack_range = 0.0
+critical_chance = 0.0
+critical_damage = 0.0
+dmg_multiplier = 0.05
+attack_speed = 0.0
+projectile_speed = 0.0
+knockback = 0.0
+knockback_level = 0
+movement_speed = 0.0
+magnet = 0.0
+growth = 0.0
+luck = 0.0
+boosted_tier = 0
+boosted_value = 0.0
+metadata/_custom_type_script = "uid://b5j25o66xgae7"
+
+[sub_resource type="Resource" id="Resource_c2ugb"]
+script = ExtResource("3_olqca")
+name = "Empty Tome IV - Switch Up"
+icon = ExtResource("11_nu0op")
+cost = 350
+tier = 2
+stats = SubResource("Resource_e6xqc")
+metadata/_custom_type_script = "uid://l7422fa60n04"
+
+[sub_resource type="Resource" id="Resource_6trdw"]
+script = ExtResource("4_gcm7t")
+description = "+5% Critical Chance
+
+Passive: Each critical hit will increase movement speed and critical damage by 5% up to 35%. (Skill not implemented yet)"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+shield = 0.0
+damage_reduction = 0.0
+attack_range = 0.0
+critical_chance = 0.05
+critical_damage = 0.0
+dmg_multiplier = 0.0
+attack_speed = 0.0
+projectile_speed = 0.0
+knockback = 0.0
+knockback_level = 0
+movement_speed = 0.0
+magnet = 0.0
+growth = 0.0
+luck = 0.0
+boosted_tier = 0
+boosted_value = 0.0
+metadata/_custom_type_script = "uid://b5j25o66xgae7"
+
+[sub_resource type="Resource" id="Resource_2nf18"]
+script = ExtResource("3_olqca")
+name = "Empty Tome IV - Faster and Harder"
+icon = ExtResource("11_nu0op")
+cost = 350
+tier = 2
+stats = SubResource("Resource_6trdw")
+metadata/_custom_type_script = "uid://l7422fa60n04"
+
+[sub_resource type="Resource" id="Resource_grcqo"]
+script = ExtResource("4_gcm7t")
+description = "+10% Attack Speed
++1 Knockback Level
+
+Passive: Each hit will slow the target's movement speed by 5% up to 50% for 5s. (Skill not implemented yet)"
+max_health = 0.0
+recovery = 0.0
+armor = 0.0
+shield = 0.0
+damage_reduction = 0.0
+attack_range = 0.0
+critical_chance = 0.0
+critical_damage = 0.0
+dmg_multiplier = 0.0
+attack_speed = 0.1
+projectile_speed = 0.0
+knockback = 0.0
+knockback_level = 1
+movement_speed = 0.0
+magnet = 0.0
+growth = 0.0
+luck = 0.0
+boosted_tier = 0
+boosted_value = 0.0
+metadata/_custom_type_script = "uid://b5j25o66xgae7"
+
+[sub_resource type="Resource" id="Resource_bh5d6"]
+script = ExtResource("3_olqca")
+name = "Empty IV - Slow Feet"
+icon = ExtResource("11_nu0op")
+cost = 350
+tier = 2
+stats = SubResource("Resource_grcqo")
+metadata/_custom_type_script = "uid://l7422fa60n04"
+
+[sub_resource type="Resource" id="Resource_eyqfm"]
+script = ExtResource("3_olqca")
+name = ""
+cost = 0
+tier = 0
 metadata/_custom_type_script = "uid://l7422fa60n04"
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_58yrj"]
@@ -659,9 +971,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = 8.0
-offset_top = -28.0002
+offset_top = -32.0002
 offset_right = 24.0
-offset_bottom = -12.0002
+offset_bottom = -16.0002
 grow_horizontal = 2
 grow_vertical = 2
 skill = SubResource("Resource_62nw6")
@@ -694,6 +1006,7 @@ offset_right = 56.0
 offset_bottom = 8.0
 grow_horizontal = 2
 grow_vertical = 2
+skill = SubResource("Resource_twont")
 
 [node name="skill_upgrade15" parent="skill_tree/offensive" instance=ExtResource("1_i82p2")]
 layout_mode = 1
@@ -708,6 +1021,7 @@ offset_right = 88.0
 offset_bottom = 8.0
 grow_horizontal = 2
 grow_vertical = 2
+skill = SubResource("Resource_0vyrp")
 
 [node name="skill_upgrade16" parent="skill_tree/offensive" instance=ExtResource("1_i82p2")]
 layout_mode = 1
@@ -722,6 +1036,7 @@ offset_right = 120.0
 offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 2
+skill = SubResource("Resource_wt33a")
 
 [node name="skill_upgrade17" parent="skill_tree/offensive" instance=ExtResource("1_i82p2")]
 layout_mode = 1
@@ -736,6 +1051,7 @@ offset_right = 120.0
 offset_bottom = 24.0
 grow_horizontal = 2
 grow_vertical = 2
+skill = SubResource("Resource_6irp5")
 
 [node name="skill_upgrade18" parent="skill_tree/offensive" instance=ExtResource("1_i82p2")]
 layout_mode = 1
@@ -750,6 +1066,7 @@ offset_right = 152.0
 offset_bottom = 8.0
 grow_horizontal = 2
 grow_vertical = 2
+skill = SubResource("Resource_ffklo")
 
 [node name="skill_upgrade20" parent="skill_tree/offensive" instance=ExtResource("1_i82p2")]
 layout_mode = 1
@@ -764,6 +1081,7 @@ offset_right = 184.0
 offset_bottom = -16.0
 grow_horizontal = 2
 grow_vertical = 2
+skill = SubResource("Resource_c2ugb")
 
 [node name="skill_upgrade21" parent="skill_tree/offensive" instance=ExtResource("1_i82p2")]
 layout_mode = 1
@@ -778,6 +1096,7 @@ offset_right = 184.0
 offset_bottom = 8.0
 grow_horizontal = 2
 grow_vertical = 2
+skill = SubResource("Resource_2nf18")
 
 [node name="skill_upgrade19" parent="skill_tree/offensive" instance=ExtResource("1_i82p2")]
 layout_mode = 1
@@ -792,62 +1111,7 @@ offset_right = 184.0
 offset_bottom = 32.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="skill_upgrade22" parent="skill_tree/offensive" instance=ExtResource("1_i82p2")]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 216.0
-offset_top = -24.0
-offset_right = 232.0
-offset_bottom = -8.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="skill_upgrade24" parent="skill_tree/offensive" instance=ExtResource("1_i82p2")]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 248.0
-offset_top = -24.0
-offset_right = 264.0
-offset_bottom = -8.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="skill_upgrade25" parent="skill_tree/offensive" instance=ExtResource("1_i82p2")]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 216.0
-offset_top = 8.0
-offset_right = 232.0
-offset_bottom = 24.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="skill_upgrade23" parent="skill_tree/offensive" instance=ExtResource("1_i82p2")]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 248.0
-offset_top = 8.0
-offset_right = 264.0
-offset_bottom = 24.0
-grow_horizontal = 2
-grow_vertical = 2
+skill = SubResource("Resource_bh5d6")
 
 [node name="offensive" type="Label" parent="skill_tree/offensive"]
 layout_mode = 0
@@ -878,6 +1142,7 @@ offset_right = -232.0
 offset_bottom = 8.0
 grow_horizontal = 2
 grow_vertical = 2
+skill = SubResource("Resource_eyqfm")
 
 [node name="skill_upgrade2" parent="skill_tree/survivability" instance=ExtResource("1_i82p2")]
 layout_mode = 1
@@ -1142,62 +1407,6 @@ offset_left = 168.0
 offset_top = 16.0
 offset_right = 184.0
 offset_bottom = 32.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="skill_upgrade22" parent="skill_tree/survivability" instance=ExtResource("1_i82p2")]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 216.0
-offset_top = -24.0
-offset_right = 232.0
-offset_bottom = -8.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="skill_upgrade24" parent="skill_tree/survivability" instance=ExtResource("1_i82p2")]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 248.0
-offset_top = -24.0
-offset_right = 264.0
-offset_bottom = -8.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="skill_upgrade25" parent="skill_tree/survivability" instance=ExtResource("1_i82p2")]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 216.0
-offset_top = 8.0
-offset_right = 232.0
-offset_bottom = 24.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="skill_upgrade23" parent="skill_tree/survivability" instance=ExtResource("1_i82p2")]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 248.0
-offset_top = 8.0
-offset_right = 264.0
-offset_bottom = 24.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -1494,62 +1703,6 @@ offset_left = 168.0
 offset_top = 16.0
 offset_right = 184.0
 offset_bottom = 32.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="skill_upgrade22" parent="skill_tree/utility" instance=ExtResource("1_i82p2")]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 216.0
-offset_top = -24.0
-offset_right = 232.0
-offset_bottom = -8.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="skill_upgrade24" parent="skill_tree/utility" instance=ExtResource("1_i82p2")]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 248.0
-offset_top = -24.0
-offset_right = 264.0
-offset_bottom = -8.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="skill_upgrade25" parent="skill_tree/utility" instance=ExtResource("1_i82p2")]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 216.0
-offset_top = 8.0
-offset_right = 232.0
-offset_bottom = 24.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="skill_upgrade23" parent="skill_tree/utility" instance=ExtResource("1_i82p2")]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 248.0
-offset_top = 8.0
-offset_right = 264.0
-offset_bottom = 24.0
 grow_horizontal = 2
 grow_vertical = 2
 

@@ -52,7 +52,7 @@ func knockback_update(delta):
 	var collider = move_and_collide(velocity * delta)
 	if collider:
 		collider.get_collider().knockback = (collider.get_collider().global_position -
-		global_position).normalized() * 50
+		global_position).normalized() * player_reference.knockback
 
 func damage_popup(amount):
 	var popup = damage_popup_node.instantiate()

@@ -17,8 +17,10 @@ enum BOOSTED_TIER {NONE, EPIC, LEGENDARY} # For drop chance boosting
 @export var critical_chance: float
 @export var critical_damage: float
 @export var dmg_multiplier : float
-@export var cast_speed: float
-@export var projectile_speed: float
+@export var attack_speed : float
+@export var projectile_speed : float
+@export var knockback : float
+@export var knockback_level : int
 
 # Utility Path
 @export var movement_speed : float 
