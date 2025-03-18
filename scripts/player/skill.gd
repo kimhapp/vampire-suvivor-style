@@ -8,4 +8,4 @@ enum SKILL_TIER  {Rare, Epic, Legendary, Master}
 @export var cost : int
 @export var tier : SKILL_TIER
 @export var stats : Stats
-@export var talent_skill : TalentSkill
+@export var skill_passive : SkillPassive
