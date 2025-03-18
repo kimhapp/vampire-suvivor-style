@@ -84,8 +84,11 @@ func _physics_process(delta: float) -> void:
 	health += recovery * delta
 
 func take_damage(amount):
-	# Armor will only reduce 90% of incoming dmg max
-	health -= max(amount * (amount / (amount + armor)), amount * 0.1)
+	if shield <= 0:
+		shield -= amount
+	else:
+		# Armor will only reduce 90% of incoming dmg max
+		health -= max(amount * (amount / (amount + armor)), amount * 0.1)
 
 func _on_self_damage_body_entered(body: Node2D) -> void:
 	take_damage(body.damage)

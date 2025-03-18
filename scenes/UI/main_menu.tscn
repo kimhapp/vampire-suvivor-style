@@ -52,7 +52,7 @@ script = ExtResource("3_olqca")
 name = "Candelabrador I"
 icon = ExtResource("5_dqbul")
 cost = 50
-tier = 0
+tier = null
 stats = SubResource("Resource_afaap")
 metadata/_custom_type_script = "uid://l7422fa60n04"
 
@@ -85,7 +85,7 @@ script = ExtResource("3_olqca")
 name = "Bracer I"
 icon = ExtResource("8_nu0op")
 cost = 50
-tier = 0
+tier = null
 stats = SubResource("Resource_1ss0f")
 metadata/_custom_type_script = "uid://l7422fa60n04"
 
@@ -119,7 +119,7 @@ script = ExtResource("3_olqca")
 name = "Gold Ring I"
 icon = ExtResource("9_6gm0r")
 cost = 50
-tier = 0
+tier = null
 stats = SubResource("Resource_glfox")
 metadata/_custom_type_script = "uid://l7422fa60n04"
 
@@ -707,9 +707,9 @@ metadata/_custom_type_script = "uid://l7422fa60n04"
 
 [sub_resource type="Resource" id="Resource_eyqfm"]
 script = ExtResource("3_olqca")
-name = ""
-cost = 0
-tier = 0
+name = null
+cost = null
+tier = null
 metadata/_custom_type_script = "uid://l7422fa60n04"
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_58yrj"]
