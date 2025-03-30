@@ -38,6 +38,8 @@ var luck : float = 0.5
 var current_boosted_tier : BOOSTED_TIER
 var current_boosted_value : float = 0.0
 var knockback : float = 50
+var critical_chance : float = 0
+var critical_damaage : float = 1.5
 
 var gold : int = 0:
 	set(value):
@@ -62,6 +64,7 @@ var level : int = 1:
 
 var nearest_enemy : CharacterBody2D
 var nearest_enemy_distance : float = attack_range
+var has_crit : bool = false
 
 @onready var pivot: Marker2D = $cursor/Cursor/pivot
 

@@ -11,7 +11,14 @@ func _physics_process(delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body.has_method("take_damage"):
 		if "dmg_multiplier" in source:
-			body.take_damage(damage * source.dmg_multiplier)
+			var chance = randf()
+			
+			if chance < source.critical_chance:
+				body.take_damage(damage * source.dmg_multiplier * source.critical_damage) 
+				source.has_crit = true
+			else:
+				body.take_damage(damage * source.dmg_multiplier)
+				source.has_crit = false
 		else:
 			body.take_damage(damage)
 		

@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 SoundManager="*res://scenes/sound/sound_manager.tscn"
 SaveData="*res://scenes/save_data.tscn"
 Persistence="*res://scenes/player/persistence.tscn"
+SkillPassiveGlobal="*res://scenes/player/skill_passive.tscn"
 
 [display]
 
